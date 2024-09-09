@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>YURTDIŞI BİLGİ YÖNETİM RANDEVU SİSTEMİ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<link rel="stylesheet" href="https://ytybs.ailevecalisma.gov.tr/assets/css/thymeleaf.css"  />
+
+</head>
+<body class="center">
+<div>
+	<table>
+	<tr>
+	<td colspan="2"><a href="https://ytybs.ailevecalisma.gov.tr/"><center>YURTDIŞI
+					BİLGİ YÖNETİM RANDEVU SİSTEMİ</center></a></td>
+	</tr>
+	<tr>
+		<td class="ortala" rowspan="2"><a href="https://www.csgb.gov.tr/"><img alt="" src="https://ytybs.ailevecalisma.gov.tr/assets/img/logo.png"></a></td>
+		<td>YURT DIŞI TEŞKİLATI BİLGİ YÖNETİM SİSTEMİ (YTBYS)<br>RANDEVU SİSTEMİ</td>
+	</tr>
+	
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+
+	<table>
+	
+	<tr>
+		<td>Sayın <span th:text="${userName}"></span>, <br />
+			<span th:text="${sorgulamaTarihi}"></span> tarihinde yurt dışı teşkilatı bilgi yönetim sistemi üzerinden yaptığınız
+			randevu sorgulama işlemine devam edebilmek için gerekli doğrulama kodu
+			<span th:text="${onayKodu}"></span> dır.
+		</td>
+	</tr>
+	<tr>
+		<td>Doğrulama kodunu sistem üzerinden girerek işleminize devam edebilirsiniz.</td>
+	</tr>
+	</table>
+		
+	<table>
+	<tr>
+		<td> <br ></td>
+	</tr>
+	</table>
+
+	<table>
+	<tr>
+		<td>Randevunuza gelemeyecekseniz <a href="https://ytybs.ailevecalisma.gov.tr/">buraya</a> tıklayarak randevunuzu iptal edebilirsiniz.</td>
+	</tr>
+	<tr>
+		<td>İyi günler dileriz.</td>
+	</tr>
+	</table>
+
+	<table>
+	<tr>
+		<td><a href="https://tr-tr.facebook.com/"><img height="50" width="50"  alt="" src="https://ytybs.ailevecalisma.gov.tr/assets/img/thymeleaf/facebookIcon.jpg"></a></td>
+		<td><a href="https://twitter.com/"><img height="50" width="50" alt="" src="https://ytybs.ailevecalisma.gov.tr/assets/img/thymeleaf/twitterIcon.jpg"></a></td>
+	</tr>
+	</table>
+	<table>
+	<tr>
+		<td>Bu e-posta kişiye özel bilgi içermektedir. Eğer bu iletinin bilginiz dahilinde gönderilmediğini düşünüyorsanız yardimmasasi@ailevecalisma.gov.tr adresine bildirimde bulunabilirsiniz. </td>
+	</tr>
+	<tr>
+		<td>Sizden kişisel bilgilerinizi veya YTBYS parolanızı telefon, e-posta v.b. yollar ile isteyen kişilere karşı dikkatli olunuz, bilgilerinizi vermeyiniz. </td>
+	</tr>
+	<tr>
+		<td>Tarayıcınızın adres çubuğundaki adresin sonunda <b>gov.tr</b> (https://ytbys-ailevecalisma.gov.tr) olmasına dikkat ediniz. </td>
+	</tr>
+	</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="SGK100WSV2Service" targetNamespace="http://ws.sgk100wsV2.sgk.gov.tr/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:tns="http://ws.sgk100wsV2.sgk.gov.tr/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://ws.sgk100wsV2.sgk.gov.tr/" schemaLocation="SGK100WSV2Service_schema1.xsd"/>
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import namespace="http://ws.sgk.intra" schemaLocation="SGK100WSV2Service_schema2.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="tckVeyaVknUzerindenSicilSorgulaResponse">
+    <part name="parameters" element="tns:tckVeyaVknUzerindenSicilSorgulaResponse">
+    </part>
+  </message>
+  <message name="isTarihBazliBorcBilgisiResponse">
+    <part name="parameters" element="tns:isTarihBazliBorcBilgisiResponse">
+    </part>
+  </message>
+  <message name="besIsyeriCalisanBilgileriGetirResponse">
+    <part name="parameters" element="tns:besIsyeriCalisanBilgileriGetirResponse">
+    </part>
+  </message>
+  <message name="alo170_RaporBilgileriSorgulaResponse">
+    <part name="parameters" element="tns:alo170_RaporBilgileriSorgulaResponse">
+    </part>
+  </message>
+  <message name="besSorgula4C">
+    <part name="parameters" element="tns:besSorgula4C">
+    </part>
+  </message>
+  <message name="tumSigortaliHizmetDokumu">
+    <part name="parameters" element="tns:tumSigortaliHizmetDokumu">
+    </part>
+  </message>
+  <message name="isyeriSicilNoIleIsyeriBilgileriSorgulaResponse">
+    <part name="parameters" element="tns:isyeriSicilNoIleIsyeriBilgileriSorgulaResponse">
+    </part>
+  </message>
+  <message name="isyeriUnvanMahiyetGetir">
+    <part name="parameters" element="tns:isyeriUnvanMahiyetGetir">
+    </part>
+  </message>
+  <message name="hizmetBorclanma4CResponse">
+    <part name="parameters" element="tns:hizmetBorclanma4CResponse">
+    </part>
+  </message>
+  <message name="tumTescilVeKimlikBilgileriniSorgula4A">
+    <part name="parameters" element="tns:tumTescilVeKimlikBilgileriniSorgula4A">
+    </part>
+  </message>
+  <message name="isyeriSicilNoIleIsyeriBilgileriSorgula">
+    <part name="parameters" element="tns:isyeriSicilNoIleIsyeriBilgileriSorgula">
+    </part>
+  </message>
+  <message name="spasResponse">
+    <part name="parameters" element="tns:spasResponse">
+    </part>
+  </message>
+  <message name="getIsyeriTescilByVergiNo">
+    <part name="parameters" element="tns:getIsyeriTescilByVergiNo">
+    </part>
+  </message>
+  <message name="besIsyeriIletisimBilgileriGetir">
+    <part name="parameters" element="tns:besIsyeriIletisimBilgileriGetir">
+    </part>
+  </message>
+  <message name="optikBilgileriSorgulama">
+    <part name="parameters" element="tns:optikBilgileriSorgulama">
+    </part>
+  </message>
+  <message name="sehitGaziAylikBilgisi4C">
+    <part name="parameters" element="tns:sehitGaziAylikBilgisi4C">
+    </part>
+  </message>
+  <message name="alo170_EvrakSorgu4CResponse">
+    <part name="parameters" element="tns:alo170_EvrakSorgu4CResponse">
+    </part>
+  </message>
+  <message name="isyeriCalisanSayisi">
+    <part name="parameters" element="tns:isyeriCalisanSayisi">
+    </part>
+  </message>
+  <message name="tum4bHizmetTahakkukSorgulaResponse">
+    <part name="parameters" element="tns:tum4bHizmetTahakkukSorgulaResponse">
+    </part>
+  </message>
+  <message name="kapsamKodSpasResponse">
+    <part name="parameters" element="tns:kapsamKodSpasResponse">
+    </part>
+  </message>
+  <message name="ortakYoneticiDonResponse">
+    <part name="parameters" element="tns:ortakYoneticiDonResponse">
+    </part>
+  </message>
+  <message name="ebyBorcSorTCK">
+    <part name="parameters" element="tns:ebyBorcSorTCK">
+    </part>
+  </message>
+  <message name="besNCalisaniOlanIsverenBilgileriniGetirResponse">
+    <part name="parameters" element="tns:besNCalisaniOlanIsverenBilgileriniGetirResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4aDetay">
+    <part name="parameters" element="tns:tescilKaydi4aDetay">
+    </part>
+  </message>
+  <message name="nakdiTazminatAyliklari4A">
+    <part name="parameters" element="tns:nakdiTazminatAyliklari4A">
+    </part>
+  </message>
+  <message name="kisiSaglikHizmetBilgisiSorgula">
+    <part name="parameters" element="tns:kisiSaglikHizmetBilgisiSorgula">
+    </part>
+  </message>
+  <message name="alo170_EvrakDetaySorgu4CResponse">
+    <part name="parameters" element="tns:alo170_EvrakDetaySorgu4CResponse">
+    </part>
+  </message>
+  <message name="faizsizKonutKredisiHakSahipligiSorgula4CResponse">
+    <part name="parameters" element="tns:faizsizKonutKredisiHakSahipligiSorgula4CResponse">
+    </part>
+  </message>
+  <message name="sigortaliHizmetDokumuGenisKapsamliResponse">
+    <part name="parameters" element="tns:sigortaliHizmetDokumuGenisKapsamliResponse">
+    </part>
+  </message>
+  <message name="isyeriDonemBordro">
+    <part name="parameters" element="tns:isyeriDonemBordro">
+    </part>
+  </message>
+  <message name="besIsyeriIletisimBilgiGetir">
+    <part name="parameters" element="tns:besIsyeriIletisimBilgiGetir">
+    </part>
+  </message>
+  <message name="sigortaliHizmetDokumu">
+    <part name="parameters" element="tns:sigortaliHizmetDokumu">
+    </part>
+  </message>
+  <message name="ws4b2020YapilandirmaResponse">
+    <part name="parameters" element="tns:ws4b2020YapilandirmaResponse">
+    </part>
+  </message>
+  <message name="ikiTarihArasiToplamPrimGunBulResponse">
+    <part name="parameters" element="tns:ikiTarihArasiToplamPrimGunBulResponse">
+    </part>
+  </message>
+  <message name="sehitGaziAylikBilgisi4CResponse">
+    <part name="parameters" element="tns:sehitGaziAylikBilgisi4CResponse">
+    </part>
+  </message>
+  <message name="borcDurumu4BResponse">
+    <part name="parameters" element="tns:borcDurumu4BResponse">
+    </part>
+  </message>
+  <message name="hizmetBorclanma4AResponse">
+    <part name="parameters" element="tns:hizmetBorclanma4AResponse">
+    </part>
+  </message>
+  <message name="isyeriBilgiGetirResponse">
+    <part name="parameters" element="tns:isyeriBilgiGetirResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4bResponse">
+    <part name="parameters" element="tns:tescilKaydi4bResponse">
+    </part>
+  </message>
+  <message name="araciTaseronListesi">
+    <part name="parameters" element="tns:araciTaseronListesi">
+    </part>
+  </message>
+  <message name="emekliKaydi4cResponse">
+    <part name="parameters" element="tns:emekliKaydi4cResponse">
+    </part>
+  </message>
+  <message name="ebyBorcSor">
+    <part name="parameters" element="tns:ebyBorcSor">
+    </part>
+  </message>
+  <message name="vknUzerindenSicilSorgula">
+    <part name="parameters" element="tns:vknUzerindenSicilSorgula">
+    </part>
+  </message>
+  <message name="nakdiTazminatAylikGelirBilgisi4BResponse">
+    <part name="parameters" element="tns:nakdiTazminatAylikGelirBilgisi4BResponse">
+    </part>
+  </message>
+  <message name="sigortaliHizmetDokumuGenisKapsamli">
+    <part name="parameters" element="tns:sigortaliHizmetDokumuGenisKapsamli">
+    </part>
+  </message>
+  <message name="spas">
+    <part name="parameters" element="tns:spas">
+    </part>
+  </message>
+  <message name="alo170_KimlikKaydiSorguResponse">
+    <part name="parameters" element="tns:alo170_KimlikKaydiSorguResponse">
+    </part>
+  </message>
+  <message name="alo170_EvrakDetaySorgu4C">
+    <part name="parameters" element="tns:alo170_EvrakDetaySorgu4C">
+    </part>
+  </message>
+  <message name="sigortaliTescilSorgula4A">
+    <part name="parameters" element="tns:sigortaliTescilSorgula4A">
+    </part>
+  </message>
+  <message name="besIsyeriYillikIstihdamSayisiGetir">
+    <part name="parameters" element="tns:besIsyeriYillikIstihdamSayisiGetir">
+    </part>
+  </message>
+  <message name="ebyBorcSorResponse">
+    <part name="parameters" element="tns:ebyBorcSorResponse">
+    </part>
+  </message>
+  <message name="alo170_KimlikDogrulama">
+    <part name="parameters" element="tns:alo170_KimlikDogrulama">
+    </part>
+  </message>
+  <message name="nakdiTazminatAyliklari4AResponse">
+    <part name="parameters" element="tns:nakdiTazminatAyliklari4AResponse">
+    </part>
+  </message>
+  <message name="testMe">
+    <part name="parameters" element="tns:testMe">
+    </part>
+  </message>
+  <message name="testMeResponse">
+    <part name="parameters" element="tns:testMeResponse">
+    </part>
+  </message>
+  <message name="besPrimSor4C">
+    <part name="parameters" element="tns:besPrimSor4C">
+    </part>
+  </message>
+  <message name="testWebServiceConnection">
+    <part name="parameters" element="tns:testWebServiceConnection">
+    </part>
+  </message>
+  <message name="kisiMedikalReceteBilgisiResponse">
+    <part name="parameters" element="tns:kisiMedikalReceteBilgisiResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4c">
+    <part name="parameters" element="tns:tescilKaydi4c">
+    </part>
+  </message>
+  <message name="tescilKaydi4b">
+    <part name="parameters" element="tns:tescilKaydi4b">
+    </part>
+  </message>
+  <message name="alo170_KimlikKaydiSorgu">
+    <part name="parameters" element="tns:alo170_KimlikKaydiSorgu">
+    </part>
+  </message>
+  <message name="testDatabaseConnectionResponse">
+    <part name="parameters" element="tns:testDatabaseConnectionResponse">
+    </part>
+  </message>
+  <message name="emekliKaydi4bResponse">
+    <part name="parameters" element="tns:emekliKaydi4bResponse">
+    </part>
+  </message>
+  <message name="basamakListesi4B">
+    <part name="parameters" element="tns:basamakListesi4B">
+    </part>
+  </message>
+  <message name="ebyBorcSorVKNResponse">
+    <part name="parameters" element="tns:ebyBorcSorVKNResponse">
+    </part>
+  </message>
+  <message name="getIsyTescYonOrtIsvBulByMernisNo">
+    <part name="parameters" element="tns:getIsyTescYonOrtIsvBulByMernisNo">
+    </part>
+  </message>
+  <message name="isyeriToplamPrimGunBulResponse">
+    <part name="parameters" element="tns:isyeriToplamPrimGunBulResponse">
+    </part>
+  </message>
+  <message name="sigortaliAyrilisSorgula4A">
+    <part name="parameters" element="tns:sigortaliAyrilisSorgula4A">
+    </part>
+  </message>
+  <message name="genelSorguResponse">
+    <part name="parameters" element="tns:genelSorguResponse">
+    </part>
+  </message>
+  <message name="hizmetBorclanma4A">
+    <part name="parameters" element="tns:hizmetBorclanma4A">
+    </part>
+  </message>
+  <message name="nakdiTazminatAylikGelirBilgisi4BDetayResponse">
+    <part name="parameters" element="tns:nakdiTazminatAylikGelirBilgisi4BDetayResponse">
+    </part>
+  </message>
+  <message name="isyeriDonemBordroDetayResponse">
+    <part name="parameters" element="tns:isyeriDonemBordroDetayResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4a">
+    <part name="parameters" element="tns:tescilKaydi4a">
+    </part>
+  </message>
+  <message name="sigortaliSonCalistigiDonemBilgiBul">
+    <part name="parameters" element="tns:sigortaliSonCalistigiDonemBilgiBul">
+    </part>
+  </message>
+  <message name="hizmetBorclanma4C">
+    <part name="parameters" element="tns:hizmetBorclanma4C">
+    </part>
+  </message>
+  <message name="hizmetBorclanma4B">
+    <part name="parameters" element="tns:hizmetBorclanma4B">
+    </part>
+  </message>
+  <message name="besNCalisaniOlanIsverenBilgileriniGetir">
+    <part name="parameters" element="tns:besNCalisaniOlanIsverenBilgileriniGetir">
+    </part>
+  </message>
+  <message name="odemeDokumu4B">
+    <part name="parameters" element="tns:odemeDokumu4B">
+    </part>
+  </message>
+  <message name="testDatabaseConnection">
+    <part name="parameters" element="tns:testDatabaseConnection">
+    </part>
+  </message>
+  <message name="detayliTescilKaydi4c">
+    <part name="parameters" element="tns:detayliTescilKaydi4c">
+    </part>
+  </message>
+  <message name="kimlikKaydiSorguResponse">
+    <part name="parameters" element="tns:kimlikKaydiSorguResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4aResponse">
+    <part name="parameters" element="tns:tescilKaydi4aResponse">
+    </part>
+  </message>
+  <message name="ws4b2020Yapilandirma">
+    <part name="parameters" element="tns:ws4b2020Yapilandirma">
+    </part>
+  </message>
+  <message name="besIsyeriIletisimBilgiGetirResponse">
+    <part name="parameters" element="tns:besIsyeriIletisimBilgiGetirResponse">
+    </part>
+  </message>
+  <message name="ebyBorcSorVKN">
+    <part name="parameters" element="tns:ebyBorcSorVKN">
+    </part>
+  </message>
+  <message name="otvSorgu4C">
+    <part name="parameters" element="tns:otvSorgu4C">
+    </part>
+  </message>
+  <message name="hizmetBilgisi4B">
+    <part name="parameters" element="tns:hizmetBilgisi4B">
+    </part>
+  </message>
+  <message name="borcDurumu4B">
+    <part name="parameters" element="tns:borcDurumu4B">
+    </part>
+  </message>
+  <message name="iscilikUcretleri">
+    <part name="parameters" element="tns:iscilikUcretleri">
+    </part>
+  </message>
+  <message name="tckVeyaVknUzerindenSicilSorgula">
+    <part name="parameters" element="tns:tckVeyaVknUzerindenSicilSorgula">
+    </part>
+  </message>
+  <message name="detayliTescilKaydi4cResponse">
+    <part name="parameters" element="tns:detayliTescilKaydi4cResponse">
+    </part>
+  </message>
+  <message name="sigortaliSonCalistigiDonemBilgiBulResponse">
+    <part name="parameters" element="tns:sigortaliSonCalistigiDonemBilgiBulResponse">
+    </part>
+  </message>
+  <message name="alo170_KimlikDogrulamaResponse">
+    <part name="parameters" element="tns:alo170_KimlikDogrulamaResponse">
+    </part>
+  </message>
+  <message name="isyeriToplamPrimGunBul">
+    <part name="parameters" element="tns:isyeriToplamPrimGunBul">
+    </part>
+  </message>
+  <message name="sigortaliAyrilisSorgula4AResponse">
+    <part name="parameters" element="tns:sigortaliAyrilisSorgula4AResponse">
+    </part>
+  </message>
+  <message name="kapsamKodSpas">
+    <part name="parameters" element="tns:kapsamKodSpas">
+    </part>
+  </message>
+  <message name="kimlikKaydiSorgu">
+    <part name="parameters" element="tns:kimlikKaydiSorgu">
+    </part>
+  </message>
+  <message name="sonBildirge4aKaydi">
+    <part name="parameters" element="tns:sonBildirge4aKaydi">
+    </part>
+  </message>
+  <message name="kisiMedikalReceteBilgisi">
+    <part name="parameters" element="tns:kisiMedikalReceteBilgisi">
+    </part>
+  </message>
+  <message name="hizmetBilgisi4BResponse">
+    <part name="parameters" element="tns:hizmetBilgisi4BResponse">
+    </part>
+  </message>
+  <message name="emekliKaydi4aResponse">
+    <part name="parameters" element="tns:emekliKaydi4aResponse">
+    </part>
+  </message>
+  <message name="ebySonucGor">
+    <part name="parameters" element="tns:ebySonucGor">
+    </part>
+  </message>
+  <message name="tum4bHizmetTahakkukSorgula">
+    <part name="parameters" element="tns:tum4bHizmetTahakkukSorgula">
+    </part>
+  </message>
+  <message name="tcIleHastaneBasvuruSorgu">
+    <part name="parameters" element="tns:tcIleHastaneBasvuruSorgu">
+    </part>
+  </message>
+  <message name="optikBilgileriSorgulamaResponse">
+    <part name="parameters" element="tns:optikBilgileriSorgulamaResponse">
+    </part>
+  </message>
+  <message name="vknUzerindenSicilSorgulaResponse">
+    <part name="parameters" element="tns:vknUzerindenSicilSorgulaResponse">
+    </part>
+  </message>
+  <message name="isverenSadeceAraciSorgula">
+    <part name="parameters" element="tns:isverenSadeceAraciSorgula">
+    </part>
+  </message>
+  <message name="ebySonucGorResponse">
+    <part name="parameters" element="tns:ebySonucGorResponse">
+    </part>
+  </message>
+  <message name="getIsyeriTescilByMernisNoResponse">
+    <part name="parameters" element="tns:getIsyeriTescilByMernisNoResponse">
+    </part>
+  </message>
+  <message name="ortakYoneticiDon">
+    <part name="parameters" element="tns:ortakYoneticiDon">
+    </part>
+  </message>
+  <message name="besIsverenAltindakiIsyeriBilgisiGetirResponse">
+    <part name="parameters" element="tns:besIsverenAltindakiIsyeriBilgisiGetirResponse">
+    </part>
+  </message>
+  <message name="isTarihBazliBorcBilgisi">
+    <part name="parameters" element="tns:isTarihBazliBorcBilgisi">
+    </part>
+  </message>
+  <message name="besSorgula4CResponse">
+    <part name="parameters" element="tns:besSorgula4CResponse">
+    </part>
+  </message>
+  <message name="tumSigortaliHizmetDokumuV2Response">
+    <part name="parameters" element="tns:tumSigortaliHizmetDokumuV2Response">
+    </part>
+  </message>
+  <message name="tumSigortaliHizmetDokumuResponse">
+    <part name="parameters" element="tns:tumSigortaliHizmetDokumuResponse">
+    </part>
+  </message>
+  <message name="unitedekiIsyerleri">
+    <part name="parameters" element="tns:unitedekiIsyerleri">
+    </part>
+  </message>
+  <message name="isyeriUnvanMahiyetGetirResponse">
+    <part name="parameters" element="tns:isyeriUnvanMahiyetGetirResponse">
+    </part>
+  </message>
+  <message name="hizmetBorclanma4BResponse">
+    <part name="parameters" element="tns:hizmetBorclanma4BResponse">
+    </part>
+  </message>
+  <message name="testDatabaseQuery">
+    <part name="parameters" element="tns:testDatabaseQuery">
+    </part>
+  </message>
+  <message name="tcIleHastaneBasvuruSorguResponse">
+    <part name="parameters" element="tns:tcIleHastaneBasvuruSorguResponse">
+    </part>
+  </message>
+  <message name="getIsyeriTescilByVergiNoResponse">
+    <part name="parameters" element="tns:getIsyeriTescilByVergiNoResponse">
+    </part>
+  </message>
+  <message name="emekliKaydi4c">
+    <part name="parameters" element="tns:emekliKaydi4c">
+    </part>
+  </message>
+  <message name="emekliKaydi4b">
+    <part name="parameters" element="tns:emekliKaydi4b">
+    </part>
+  </message>
+  <message name="emekliKaydi4a">
+    <part name="parameters" element="tns:emekliKaydi4a">
+    </part>
+  </message>
+  <message name="sonBildirge4aKaydiResponse">
+    <part name="parameters" element="tns:sonBildirge4aKaydiResponse">
+    </part>
+  </message>
+  <message name="kisiSaglikHizmetBilgisiSorgulaResponse">
+    <part name="parameters" element="tns:kisiSaglikHizmetBilgisiSorgulaResponse">
+    </part>
+  </message>
+  <message name="unitedekiIsyerleriResponse">
+    <part name="parameters" element="tns:unitedekiIsyerleriResponse">
+    </part>
+  </message>
+  <message name="alo170_RaporBilgileriSorgula">
+    <part name="parameters" element="tns:alo170_RaporBilgileriSorgula">
+    </part>
+  </message>
+  <message name="getIsyTescYonOrtIsvBulByMernisNoResponse">
+    <part name="parameters" element="tns:getIsyTescYonOrtIsvBulByMernisNoResponse">
+    </part>
+  </message>
+  <message name="besIsyeriYillikIstihdamSayisiGetirResponse">
+    <part name="parameters" element="tns:besIsyeriYillikIstihdamSayisiGetirResponse">
+    </part>
+  </message>
+  <message name="tumSigortaliHizmetDokumuV2">
+    <part name="parameters" element="tns:tumSigortaliHizmetDokumuV2">
+    </part>
+  </message>
+  <message name="ikiTarihArasiToplamPrimGunBul">
+    <part name="parameters" element="tns:ikiTarihArasiToplamPrimGunBul">
+    </part>
+  </message>
+  <message name="tumTescilVeKimlikBilgileriniSorgula4AResponse">
+    <part name="parameters" element="tns:tumTescilVeKimlikBilgileriniSorgula4AResponse">
+    </part>
+  </message>
+  <message name="getIsyeriTescilByMernisNo">
+    <part name="parameters" element="tns:getIsyeriTescilByMernisNo">
+    </part>
+  </message>
+  <message name="alo170_EvrakSorgu4C">
+    <part name="parameters" element="tns:alo170_EvrakSorgu4C">
+    </part>
+  </message>
+  <message name="nakdiTazminatAylikGelirBilgisi4BDetay">
+    <part name="parameters" element="tns:nakdiTazminatAylikGelirBilgisi4BDetay">
+    </part>
+  </message>
+  <message name="araciTaseronListesiResponse">
+    <part name="parameters" element="tns:araciTaseronListesiResponse">
+    </part>
+  </message>
+  <message name="iscilikUcretleriResponse">
+    <part name="parameters" element="tns:iscilikUcretleriResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4cResponse">
+    <part name="parameters" element="tns:tescilKaydi4cResponse">
+    </part>
+  </message>
+  <message name="isyeriBilgiGetir">
+    <part name="parameters" element="tns:isyeriBilgiGetir">
+    </part>
+  </message>
+  <message name="ebyBorcSorTCKResponse">
+    <part name="parameters" element="tns:ebyBorcSorTCKResponse">
+    </part>
+  </message>
+  <message name="besPrimSor4CResponse">
+    <part name="parameters" element="tns:besPrimSor4CResponse">
+    </part>
+  </message>
+  <message name="basamakListesi4BResponse">
+    <part name="parameters" element="tns:basamakListesi4BResponse">
+    </part>
+  </message>
+  <message name="isverenSadeceAraciSorgulaResponse">
+    <part name="parameters" element="tns:isverenSadeceAraciSorgulaResponse">
+    </part>
+  </message>
+  <message name="sigortaliTescilSorgula4AResponse">
+    <part name="parameters" element="tns:sigortaliTescilSorgula4AResponse">
+    </part>
+  </message>
+  <message name="testWebServiceConnectionResponse">
+    <part name="parameters" element="tns:testWebServiceConnectionResponse">
+    </part>
+  </message>
+  <message name="otvSorgu4CResponse">
+    <part name="parameters" element="tns:otvSorgu4CResponse">
+    </part>
+  </message>
+  <message name="testDatabaseQueryResponse">
+    <part name="parameters" element="tns:testDatabaseQueryResponse">
+    </part>
+  </message>
+  <message name="besIsyeriCalisanBilgileriGetir">
+    <part name="parameters" element="tns:besIsyeriCalisanBilgileriGetir">
+    </part>
+  </message>
+  <message name="nakdiTazminatAylikGelirBilgisi4B">
+    <part name="parameters" element="tns:nakdiTazminatAylikGelirBilgisi4B">
+    </part>
+  </message>
+  <message name="isyeriDonemBordroDetay">
+    <part name="parameters" element="tns:isyeriDonemBordroDetay">
+    </part>
+  </message>
+  <message name="genelSorgu">
+    <part name="parameters" element="tns:genelSorgu">
+    </part>
+  </message>
+  <message name="besIsyeriIletisimBilgileriGetirResponse">
+    <part name="parameters" element="tns:besIsyeriIletisimBilgileriGetirResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4cDetayResponse">
+    <part name="parameters" element="tns:tescilKaydi4cDetayResponse">
+    </part>
+  </message>
+  <message name="besIsverenAltindakiIsyeriBilgisiGetir">
+    <part name="parameters" element="tns:besIsverenAltindakiIsyeriBilgisiGetir">
+    </part>
+  </message>
+  <message name="isyeriDonemBordroResponse">
+    <part name="parameters" element="tns:isyeriDonemBordroResponse">
+    </part>
+  </message>
+  <message name="tescilKaydi4cDetay">
+    <part name="parameters" element="tns:tescilKaydi4cDetay">
+    </part>
+  </message>
+  <message name="odemeDokumu4BResponse">
+    <part name="parameters" element="tns:odemeDokumu4BResponse">
+    </part>
+  </message>
+  <message name="isyeriCalisanSayisiResponse">
+    <part name="parameters" element="tns:isyeriCalisanSayisiResponse">
+    </part>
+  </message>
+  <message name="sigortaliHizmetDokumuResponse">
+    <part name="parameters" element="tns:sigortaliHizmetDokumuResponse">
+    </part>
+  </message>
+  <message name="faizsizKonutKredisiHakSahipligiSorgula4C">
+    <part name="parameters" element="tns:faizsizKonutKredisiHakSahipligiSorgula4C">
+    </part>
+  </message>
+  <message name="tescilKaydi4aDetayResponse">
+    <part name="parameters" element="tns:tescilKaydi4aDetayResponse">
+    </part>
+  </message>
+  <portType name="SGK100WSV2Delegate">
+    <operation name="besIsyeriCalisanBilgileriGetir">
+      <input message="tns:besIsyeriCalisanBilgileriGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriCalisanBilgileriGetirRequest">
+    </input>
+      <output message="tns:besIsyeriCalisanBilgileriGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriCalisanBilgileriGetirResponse">
+    </output>
+    </operation>
+    <operation name="testDatabaseQuery">
+      <input message="tns:testDatabaseQuery" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testDatabaseQueryRequest">
+    </input>
+      <output message="tns:testDatabaseQueryResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testDatabaseQueryResponse">
+    </output>
+    </operation>
+    <operation name="sonBildirge4aKaydi">
+      <input message="tns:sonBildirge4aKaydi" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sonBildirge4aKaydiRequest">
+    </input>
+      <output message="tns:sonBildirge4aKaydiResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sonBildirge4aKaydiResponse">
+    </output>
+    </operation>
+    <operation name="sigortaliTescilSorgula4A">
+      <input message="tns:sigortaliTescilSorgula4A" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliTescilSorgula4ARequest">
+    </input>
+      <output message="tns:sigortaliTescilSorgula4AResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliTescilSorgula4AResponse">
+    </output>
+    </operation>
+    <operation name="ebyBorcSor">
+      <input message="tns:ebyBorcSor" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebyBorcSorRequest">
+    </input>
+      <output message="tns:ebyBorcSorResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebyBorcSorResponse">
+    </output>
+    </operation>
+    <operation name="sehitGaziAylikBilgisi4C">
+      <input message="tns:sehitGaziAylikBilgisi4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sehitGaziAylikBilgisi4CRequest">
+    </input>
+      <output message="tns:sehitGaziAylikBilgisi4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sehitGaziAylikBilgisi4CResponse">
+    </output>
+    </operation>
+    <operation name="otvSorgu4C">
+      <input message="tns:otvSorgu4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/otvSorgu4CRequest">
+    </input>
+      <output message="tns:otvSorgu4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/otvSorgu4CResponse">
+    </output>
+    </operation>
+    <operation name="kisiSaglikHizmetBilgisiSorgula">
+      <input message="tns:kisiSaglikHizmetBilgisiSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kisiSaglikHizmetBilgisiSorgulaRequest">
+    </input>
+      <output message="tns:kisiSaglikHizmetBilgisiSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kisiSaglikHizmetBilgisiSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="detayliTescilKaydi4c">
+      <input message="tns:detayliTescilKaydi4c" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/detayliTescilKaydi4cRequest">
+    </input>
+      <output message="tns:detayliTescilKaydi4cResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/detayliTescilKaydi4cResponse">
+    </output>
+    </operation>
+    <operation name="tum4bHizmetTahakkukSorgula">
+      <input message="tns:tum4bHizmetTahakkukSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tum4bHizmetTahakkukSorgulaRequest">
+    </input>
+      <output message="tns:tum4bHizmetTahakkukSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tum4bHizmetTahakkukSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="getIsyeriTescilByVergiNo">
+      <input message="tns:getIsyeriTescilByVergiNo" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/getIsyeriTescilByVergiNoRequest">
+    </input>
+      <output message="tns:getIsyeriTescilByVergiNoResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/getIsyeriTescilByVergiNoResponse">
+    </output>
+    </operation>
+    <operation name="tckVeyaVknUzerindenSicilSorgula">
+      <input message="tns:tckVeyaVknUzerindenSicilSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tckVeyaVknUzerindenSicilSorgulaRequest">
+    </input>
+      <output message="tns:tckVeyaVknUzerindenSicilSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tckVeyaVknUzerindenSicilSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="alo170_KimlikDogrulama">
+      <input message="tns:alo170_KimlikDogrulama" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_KimlikDogrulamaRequest">
+    </input>
+      <output message="tns:alo170_KimlikDogrulamaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_KimlikDogrulamaResponse">
+    </output>
+    </operation>
+    <operation name="kisiMedikalReceteBilgisi">
+      <input message="tns:kisiMedikalReceteBilgisi" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kisiMedikalReceteBilgisiRequest">
+    </input>
+      <output message="tns:kisiMedikalReceteBilgisiResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kisiMedikalReceteBilgisiResponse">
+    </output>
+    </operation>
+    <operation name="tescilKaydi4cDetay">
+      <input message="tns:tescilKaydi4cDetay" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4cDetayRequest">
+    </input>
+      <output message="tns:tescilKaydi4cDetayResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4cDetayResponse">
+    </output>
+    </operation>
+    <operation name="isyeriDonemBordroDetay">
+      <input message="tns:isyeriDonemBordroDetay" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriDonemBordroDetayRequest">
+    </input>
+      <output message="tns:isyeriDonemBordroDetayResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriDonemBordroDetayResponse">
+    </output>
+    </operation>
+    <operation name="kapsamKodSpas">
+      <input message="tns:kapsamKodSpas" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kapsamKodSpasRequest">
+    </input>
+      <output message="tns:kapsamKodSpasResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kapsamKodSpasResponse">
+    </output>
+    </operation>
+    <operation name="kimlikKaydiSorgu">
+      <input message="tns:kimlikKaydiSorgu" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kimlikKaydiSorguRequest">
+    </input>
+      <output message="tns:kimlikKaydiSorguResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/kimlikKaydiSorguResponse">
+    </output>
+    </operation>
+    <operation name="tumSigortaliHizmetDokumu">
+      <input message="tns:tumSigortaliHizmetDokumu" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tumSigortaliHizmetDokumuRequest">
+    </input>
+      <output message="tns:tumSigortaliHizmetDokumuResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tumSigortaliHizmetDokumuResponse">
+    </output>
+    </operation>
+    <operation name="isyeriCalisanSayisi">
+      <input message="tns:isyeriCalisanSayisi" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriCalisanSayisiRequest">
+    </input>
+      <output message="tns:isyeriCalisanSayisiResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriCalisanSayisiResponse">
+    </output>
+    </operation>
+    <operation name="besNCalisaniOlanIsverenBilgileriniGetir">
+      <input message="tns:besNCalisaniOlanIsverenBilgileriniGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besNCalisaniOlanIsverenBilgileriniGetirRequest">
+    </input>
+      <output message="tns:besNCalisaniOlanIsverenBilgileriniGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besNCalisaniOlanIsverenBilgileriniGetirResponse">
+    </output>
+    </operation>
+    <operation name="sigortaliHizmetDokumu">
+      <input message="tns:sigortaliHizmetDokumu" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliHizmetDokumuRequest">
+    </input>
+      <output message="tns:sigortaliHizmetDokumuResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliHizmetDokumuResponse">
+    </output>
+    </operation>
+    <operation name="borcDurumu4B">
+      <input message="tns:borcDurumu4B" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/borcDurumu4BRequest">
+    </input>
+      <output message="tns:borcDurumu4BResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/borcDurumu4BResponse">
+    </output>
+    </operation>
+    <operation name="vknUzerindenSicilSorgula">
+      <input message="tns:vknUzerindenSicilSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/vknUzerindenSicilSorgulaRequest">
+    </input>
+      <output message="tns:vknUzerindenSicilSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/vknUzerindenSicilSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="tescilKaydi4b">
+      <input message="tns:tescilKaydi4b" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4bRequest">
+    </input>
+      <output message="tns:tescilKaydi4bResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4bResponse">
+    </output>
+    </operation>
+    <operation name="tescilKaydi4c">
+      <input message="tns:tescilKaydi4c" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4cRequest">
+    </input>
+      <output message="tns:tescilKaydi4cResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4cResponse">
+    </output>
+    </operation>
+    <operation name="faizsizKonutKredisiHakSahipligiSorgula4C">
+      <input message="tns:faizsizKonutKredisiHakSahipligiSorgula4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/faizsizKonutKredisiHakSahipligiSorgula4CRequest">
+    </input>
+      <output message="tns:faizsizKonutKredisiHakSahipligiSorgula4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/faizsizKonutKredisiHakSahipligiSorgula4CResponse">
+    </output>
+    </operation>
+    <operation name="tescilKaydi4a">
+      <input message="tns:tescilKaydi4a" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4aRequest">
+    </input>
+      <output message="tns:tescilKaydi4aResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4aResponse">
+    </output>
+    </operation>
+    <operation name="basamakListesi4B">
+      <input message="tns:basamakListesi4B" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/basamakListesi4BRequest">
+    </input>
+      <output message="tns:basamakListesi4BResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/basamakListesi4BResponse">
+    </output>
+    </operation>
+    <operation name="isverenSadeceAraciSorgula">
+      <input message="tns:isverenSadeceAraciSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isverenSadeceAraciSorgulaRequest">
+    </input>
+      <output message="tns:isverenSadeceAraciSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isverenSadeceAraciSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="alo170_KimlikKaydiSorgu">
+      <input message="tns:alo170_KimlikKaydiSorgu" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_KimlikKaydiSorguRequest">
+    </input>
+      <output message="tns:alo170_KimlikKaydiSorguResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_KimlikKaydiSorguResponse">
+    </output>
+    </operation>
+    <operation name="besIsyeriIletisimBilgileriGetir">
+      <input message="tns:besIsyeriIletisimBilgileriGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriIletisimBilgileriGetirRequest">
+    </input>
+      <output message="tns:besIsyeriIletisimBilgileriGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriIletisimBilgileriGetirResponse">
+    </output>
+    </operation>
+    <operation name="testDatabaseConnection">
+      <input message="tns:testDatabaseConnection" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testDatabaseConnectionRequest">
+    </input>
+      <output message="tns:testDatabaseConnectionResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testDatabaseConnectionResponse">
+    </output>
+    </operation>
+    <operation name="isyeriUnvanMahiyetGetir">
+      <input message="tns:isyeriUnvanMahiyetGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriUnvanMahiyetGetirRequest">
+    </input>
+      <output message="tns:isyeriUnvanMahiyetGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriUnvanMahiyetGetirResponse">
+    </output>
+    </operation>
+    <operation name="getIsyeriTescilByMernisNo">
+      <input message="tns:getIsyeriTescilByMernisNo" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/getIsyeriTescilByMernisNoRequest">
+    </input>
+      <output message="tns:getIsyeriTescilByMernisNoResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/getIsyeriTescilByMernisNoResponse">
+    </output>
+    </operation>
+    <operation name="alo170_RaporBilgileriSorgula">
+      <input message="tns:alo170_RaporBilgileriSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_RaporBilgileriSorgulaRequest">
+    </input>
+      <output message="tns:alo170_RaporBilgileriSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_RaporBilgileriSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="hizmetBilgisi4B">
+      <input message="tns:hizmetBilgisi4B" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBilgisi4BRequest">
+    </input>
+      <output message="tns:hizmetBilgisi4BResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBilgisi4BResponse">
+    </output>
+    </operation>
+    <operation name="testWebServiceConnection">
+      <input message="tns:testWebServiceConnection" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testWebServiceConnectionRequest">
+    </input>
+      <output message="tns:testWebServiceConnectionResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testWebServiceConnectionResponse">
+    </output>
+    </operation>
+    <operation name="ws4b2020Yapilandirma">
+      <input message="tns:ws4b2020Yapilandirma" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ws4b2020YapilandirmaRequest">
+    </input>
+      <output message="tns:ws4b2020YapilandirmaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ws4b2020YapilandirmaResponse">
+    </output>
+    </operation>
+    <operation name="ebySonucGor">
+      <input message="tns:ebySonucGor" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebySonucGorRequest">
+    </input>
+      <output message="tns:ebySonucGorResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebySonucGorResponse">
+    </output>
+    </operation>
+    <operation name="emekliKaydi4c">
+      <input message="tns:emekliKaydi4c" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/emekliKaydi4cRequest">
+    </input>
+      <output message="tns:emekliKaydi4cResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/emekliKaydi4cResponse">
+    </output>
+    </operation>
+    <operation name="odemeDokumu4B">
+      <input message="tns:odemeDokumu4B" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/odemeDokumu4BRequest">
+    </input>
+      <output message="tns:odemeDokumu4BResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/odemeDokumu4BResponse">
+    </output>
+    </operation>
+    <operation name="tcIleHastaneBasvuruSorgu">
+      <input message="tns:tcIleHastaneBasvuruSorgu" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tcIleHastaneBasvuruSorguRequest">
+    </input>
+      <output message="tns:tcIleHastaneBasvuruSorguResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tcIleHastaneBasvuruSorguResponse">
+    </output>
+    </operation>
+    <operation name="emekliKaydi4b">
+      <input message="tns:emekliKaydi4b" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/emekliKaydi4bRequest">
+    </input>
+      <output message="tns:emekliKaydi4bResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/emekliKaydi4bResponse">
+    </output>
+    </operation>
+    <operation name="sigortaliAyrilisSorgula4A">
+      <input message="tns:sigortaliAyrilisSorgula4A" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliAyrilisSorgula4ARequest">
+    </input>
+      <output message="tns:sigortaliAyrilisSorgula4AResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliAyrilisSorgula4AResponse">
+    </output>
+    </operation>
+    <operation name="alo170_EvrakDetaySorgu4C">
+      <input message="tns:alo170_EvrakDetaySorgu4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_EvrakDetaySorgu4CRequest">
+    </input>
+      <output message="tns:alo170_EvrakDetaySorgu4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_EvrakDetaySorgu4CResponse">
+    </output>
+    </operation>
+    <operation name="emekliKaydi4a">
+      <input message="tns:emekliKaydi4a" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/emekliKaydi4aRequest">
+    </input>
+      <output message="tns:emekliKaydi4aResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/emekliKaydi4aResponse">
+    </output>
+    </operation>
+    <operation name="besIsverenAltindakiIsyeriBilgisiGetir">
+      <input message="tns:besIsverenAltindakiIsyeriBilgisiGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsverenAltindakiIsyeriBilgisiGetirRequest">
+    </input>
+      <output message="tns:besIsverenAltindakiIsyeriBilgisiGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsverenAltindakiIsyeriBilgisiGetirResponse">
+    </output>
+    </operation>
+    <operation name="ebyBorcSorTCK">
+      <input message="tns:ebyBorcSorTCK" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebyBorcSorTCKRequest">
+    </input>
+      <output message="tns:ebyBorcSorTCKResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebyBorcSorTCKResponse">
+    </output>
+    </operation>
+    <operation name="ikiTarihArasiToplamPrimGunBul">
+      <input message="tns:ikiTarihArasiToplamPrimGunBul" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ikiTarihArasiToplamPrimGunBulRequest">
+    </input>
+      <output message="tns:ikiTarihArasiToplamPrimGunBulResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ikiTarihArasiToplamPrimGunBulResponse">
+    </output>
+    </operation>
+    <operation name="tescilKaydi4aDetay">
+      <input message="tns:tescilKaydi4aDetay" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4aDetayRequest">
+    </input>
+      <output message="tns:tescilKaydi4aDetayResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tescilKaydi4aDetayResponse">
+    </output>
+    </operation>
+    <operation name="sigortaliHizmetDokumuGenisKapsamli">
+      <input message="tns:sigortaliHizmetDokumuGenisKapsamli" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliHizmetDokumuGenisKapsamliRequest">
+    </input>
+      <output message="tns:sigortaliHizmetDokumuGenisKapsamliResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliHizmetDokumuGenisKapsamliResponse">
+    </output>
+    </operation>
+    <operation name="hizmetBorclanma4B">
+      <input message="tns:hizmetBorclanma4B" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBorclanma4BRequest">
+    </input>
+      <output message="tns:hizmetBorclanma4BResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBorclanma4BResponse">
+    </output>
+    </operation>
+    <operation name="araciTaseronListesi">
+      <input message="tns:araciTaseronListesi" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/araciTaseronListesiRequest">
+    </input>
+      <output message="tns:araciTaseronListesiResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/araciTaseronListesiResponse">
+    </output>
+    </operation>
+    <operation name="hizmetBorclanma4C">
+      <input message="tns:hizmetBorclanma4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBorclanma4CRequest">
+    </input>
+      <output message="tns:hizmetBorclanma4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBorclanma4CResponse">
+    </output>
+    </operation>
+    <operation name="hizmetBorclanma4A">
+      <input message="tns:hizmetBorclanma4A" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBorclanma4ARequest">
+    </input>
+      <output message="tns:hizmetBorclanma4AResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/hizmetBorclanma4AResponse">
+    </output>
+    </operation>
+    <operation name="tumTescilVeKimlikBilgileriniSorgula4A">
+      <input message="tns:tumTescilVeKimlikBilgileriniSorgula4A" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tumTescilVeKimlikBilgileriniSorgula4ARequest">
+    </input>
+      <output message="tns:tumTescilVeKimlikBilgileriniSorgula4AResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tumTescilVeKimlikBilgileriniSorgula4AResponse">
+    </output>
+    </operation>
+    <operation name="isyeriBilgiGetir">
+      <input message="tns:isyeriBilgiGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriBilgiGetirRequest">
+    </input>
+      <output message="tns:isyeriBilgiGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriBilgiGetirResponse">
+    </output>
+    </operation>
+    <operation name="besSorgula4C">
+      <input message="tns:besSorgula4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besSorgula4CRequest">
+    </input>
+      <output message="tns:besSorgula4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besSorgula4CResponse">
+    </output>
+    </operation>
+    <operation name="nakdiTazminatAyliklari4A">
+      <input message="tns:nakdiTazminatAyliklari4A" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/nakdiTazminatAyliklari4ARequest">
+    </input>
+      <output message="tns:nakdiTazminatAyliklari4AResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/nakdiTazminatAyliklari4AResponse">
+    </output>
+    </operation>
+    <operation name="optikBilgileriSorgulama">
+      <input message="tns:optikBilgileriSorgulama" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/optikBilgileriSorgulamaRequest">
+    </input>
+      <output message="tns:optikBilgileriSorgulamaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/optikBilgileriSorgulamaResponse">
+    </output>
+    </operation>
+    <operation name="getIsyTescYonOrtIsvBulByMernisNo">
+      <input message="tns:getIsyTescYonOrtIsvBulByMernisNo" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/getIsyTescYonOrtIsvBulByMernisNoRequest">
+    </input>
+      <output message="tns:getIsyTescYonOrtIsvBulByMernisNoResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/getIsyTescYonOrtIsvBulByMernisNoResponse">
+    </output>
+    </operation>
+    <operation name="besIsyeriYillikIstihdamSayisiGetir">
+      <input message="tns:besIsyeriYillikIstihdamSayisiGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriYillikIstihdamSayisiGetirRequest">
+    </input>
+      <output message="tns:besIsyeriYillikIstihdamSayisiGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriYillikIstihdamSayisiGetirResponse">
+    </output>
+    </operation>
+    <operation name="isyeriToplamPrimGunBul">
+      <input message="tns:isyeriToplamPrimGunBul" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriToplamPrimGunBulRequest">
+    </input>
+      <output message="tns:isyeriToplamPrimGunBulResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriToplamPrimGunBulResponse">
+    </output>
+    </operation>
+    <operation name="nakdiTazminatAylikGelirBilgisi4B">
+      <input message="tns:nakdiTazminatAylikGelirBilgisi4B" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/nakdiTazminatAylikGelirBilgisi4BRequest">
+    </input>
+      <output message="tns:nakdiTazminatAylikGelirBilgisi4BResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/nakdiTazminatAylikGelirBilgisi4BResponse">
+    </output>
+    </operation>
+    <operation name="sigortaliSonCalistigiDonemBilgiBul">
+      <input message="tns:sigortaliSonCalistigiDonemBilgiBul" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliSonCalistigiDonemBilgiBulRequest">
+    </input>
+      <output message="tns:sigortaliSonCalistigiDonemBilgiBulResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/sigortaliSonCalistigiDonemBilgiBulResponse">
+    </output>
+    </operation>
+    <operation name="tumSigortaliHizmetDokumuV2">
+      <input message="tns:tumSigortaliHizmetDokumuV2" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tumSigortaliHizmetDokumuV2Request">
+    </input>
+      <output message="tns:tumSigortaliHizmetDokumuV2Response" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/tumSigortaliHizmetDokumuV2Response">
+    </output>
+    </operation>
+    <operation name="besIsyeriIletisimBilgiGetir">
+      <input message="tns:besIsyeriIletisimBilgiGetir" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriIletisimBilgiGetirRequest">
+    </input>
+      <output message="tns:besIsyeriIletisimBilgiGetirResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besIsyeriIletisimBilgiGetirResponse">
+    </output>
+    </operation>
+    <operation name="ebyBorcSorVKN">
+      <input message="tns:ebyBorcSorVKN" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebyBorcSorVKNRequest">
+    </input>
+      <output message="tns:ebyBorcSorVKNResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ebyBorcSorVKNResponse">
+    </output>
+    </operation>
+    <operation name="nakdiTazminatAylikGelirBilgisi4BDetay">
+      <input message="tns:nakdiTazminatAylikGelirBilgisi4BDetay" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/nakdiTazminatAylikGelirBilgisi4BDetayRequest">
+    </input>
+      <output message="tns:nakdiTazminatAylikGelirBilgisi4BDetayResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/nakdiTazminatAylikGelirBilgisi4BDetayResponse">
+    </output>
+    </operation>
+    <operation name="ortakYoneticiDon">
+      <input message="tns:ortakYoneticiDon" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ortakYoneticiDonRequest">
+    </input>
+      <output message="tns:ortakYoneticiDonResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/ortakYoneticiDonResponse">
+    </output>
+    </operation>
+    <operation name="isyeriDonemBordro">
+      <input message="tns:isyeriDonemBordro" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriDonemBordroRequest">
+    </input>
+      <output message="tns:isyeriDonemBordroResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriDonemBordroResponse">
+    </output>
+    </operation>
+    <operation name="unitedekiIsyerleri">
+      <input message="tns:unitedekiIsyerleri" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/unitedekiIsyerleriRequest">
+    </input>
+      <output message="tns:unitedekiIsyerleriResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/unitedekiIsyerleriResponse">
+    </output>
+    </operation>
+    <operation name="isyeriSicilNoIleIsyeriBilgileriSorgula">
+      <input message="tns:isyeriSicilNoIleIsyeriBilgileriSorgula" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriSicilNoIleIsyeriBilgileriSorgulaRequest">
+    </input>
+      <output message="tns:isyeriSicilNoIleIsyeriBilgileriSorgulaResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isyeriSicilNoIleIsyeriBilgileriSorgulaResponse">
+    </output>
+    </operation>
+    <operation name="genelSorgu">
+      <input message="tns:genelSorgu" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/genelSorguRequest">
+    </input>
+      <output message="tns:genelSorguResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/genelSorguResponse">
+    </output>
+    </operation>
+    <operation name="besPrimSor4C">
+      <input message="tns:besPrimSor4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besPrimSor4CRequest">
+    </input>
+      <output message="tns:besPrimSor4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/besPrimSor4CResponse">
+    </output>
+    </operation>
+    <operation name="alo170_EvrakSorgu4C">
+      <input message="tns:alo170_EvrakSorgu4C" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_EvrakSorgu4CRequest">
+    </input>
+      <output message="tns:alo170_EvrakSorgu4CResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/alo170_EvrakSorgu4CResponse">
+    </output>
+    </operation>
+    <operation name="spas">
+      <input message="tns:spas" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/spasRequest">
+    </input>
+      <output message="tns:spasResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/spasResponse">
+    </output>
+    </operation>
+    <operation name="testMe">
+      <input message="tns:testMe" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testMeRequest">
+    </input>
+      <output message="tns:testMeResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/testMeResponse">
+    </output>
+    </operation>
+    <operation name="isTarihBazliBorcBilgisi">
+      <input message="tns:isTarihBazliBorcBilgisi" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isTarihBazliBorcBilgisiRequest">
+    </input>
+      <output message="tns:isTarihBazliBorcBilgisiResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/isTarihBazliBorcBilgisiResponse">
+    </output>
+    </operation>
+    <operation name="iscilikUcretleri">
+      <input message="tns:iscilikUcretleri" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/iscilikUcretleriRequest">
+    </input>
+      <output message="tns:iscilikUcretleriResponse" wsam:Action="http://ws.sgk100wsV2.sgk.gov.tr/SGK100WSV2Delegate/iscilikUcretleriResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="SGK100WSV2PortBinding" type="tns:SGK100WSV2Delegate">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="besIsyeriCalisanBilgileriGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="testDatabaseQuery">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sonBildirge4aKaydi">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sigortaliTescilSorgula4A">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ebyBorcSor">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sehitGaziAylikBilgisi4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="otvSorgu4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="kisiSaglikHizmetBilgisiSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="detayliTescilKaydi4c">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tum4bHizmetTahakkukSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getIsyeriTescilByVergiNo">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tckVeyaVknUzerindenSicilSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="alo170_KimlikDogrulama">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="kisiMedikalReceteBilgisi">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tescilKaydi4cDetay">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriDonemBordroDetay">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="kapsamKodSpas">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="kimlikKaydiSorgu">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tumSigortaliHizmetDokumu">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriCalisanSayisi">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besNCalisaniOlanIsverenBilgileriniGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sigortaliHizmetDokumu">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="borcDurumu4B">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="vknUzerindenSicilSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tescilKaydi4b">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tescilKaydi4c">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="faizsizKonutKredisiHakSahipligiSorgula4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tescilKaydi4a">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="basamakListesi4B">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isverenSadeceAraciSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="alo170_KimlikKaydiSorgu">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besIsyeriIletisimBilgileriGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="testDatabaseConnection">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriUnvanMahiyetGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getIsyeriTescilByMernisNo">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="alo170_RaporBilgileriSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="hizmetBilgisi4B">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="testWebServiceConnection">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ws4b2020Yapilandirma">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ebySonucGor">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="emekliKaydi4c">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="odemeDokumu4B">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tcIleHastaneBasvuruSorgu">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="emekliKaydi4b">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sigortaliAyrilisSorgula4A">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="alo170_EvrakDetaySorgu4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="emekliKaydi4a">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besIsverenAltindakiIsyeriBilgisiGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ebyBorcSorTCK">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ikiTarihArasiToplamPrimGunBul">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tescilKaydi4aDetay">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sigortaliHizmetDokumuGenisKapsamli">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="hizmetBorclanma4B">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="araciTaseronListesi">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="hizmetBorclanma4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="hizmetBorclanma4A">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tumTescilVeKimlikBilgileriniSorgula4A">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriBilgiGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besSorgula4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="nakdiTazminatAyliklari4A">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="optikBilgileriSorgulama">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getIsyTescYonOrtIsvBulByMernisNo">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besIsyeriYillikIstihdamSayisiGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriToplamPrimGunBul">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="nakdiTazminatAylikGelirBilgisi4B">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sigortaliSonCalistigiDonemBilgiBul">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="tumSigortaliHizmetDokumuV2">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besIsyeriIletisimBilgiGetir">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ebyBorcSorVKN">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="nakdiTazminatAylikGelirBilgisi4BDetay">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ortakYoneticiDon">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriDonemBordro">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="unitedekiIsyerleri">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isyeriSicilNoIleIsyeriBilgileriSorgula">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="genelSorgu">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="besPrimSor4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="alo170_EvrakSorgu4C">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="spas">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="testMe">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="isTarihBazliBorcBilgisi">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="iscilikUcretleri">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="SGK100WSV2Service">
+    <port name="SGK100WSV2Port" binding="tns:SGK100WSV2PortBinding">
+      <soap:address location="https://uygkamu.sgk.gov.tr/SGK100WSV2/SGK100WSV2Service"/>
+    </port>
+  </service>
+</definitions>

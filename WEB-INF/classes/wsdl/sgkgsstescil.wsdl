@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.tescil.gss.sgk.gov.tr" xmlns:impl="http://ws.tescil.gss.sgk.gov.tr" xmlns:intf="http://ws.tescil.gss.sgk.gov.tr" xmlns:tns2="http://dto.tescil.gss.sgk.gov.tr" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://dto.tescil.gss.sgk.gov.tr" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="TescilKaydetDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="tescilBasTarStr" nillable="true" type="xsd:string"/>
+     <element name="tescilBitTarStr" nillable="true" type="xsd:string"/>
+     <element name="saglikStatuStr" nillable="true" type="xsd:string"/>
+     <element name="iskurBelgeMahiyetStr" nillable="true" type="xsd:string"/>
+     <element name="vatansizIkametSebebiStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+     <element name="kismiSureliGunSayisiInt" type="xsd:int"/>
+     <element name="milliSavunmaTescilNedeniStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="muhasebeId" nillable="true" type="xsd:string"/>
+     <element name="muhasebeSonucKod" type="xsd:int"/>
+     <element name="tescilIslemiYapilamadiHataDTO" nillable="true" type="tns2:TescilIslemiYapilamadiHataDTO"/>
+     <element name="tescilIslemiYapildiHareketKaydiDTO" nillable="true" type="tns2:TescilIslemiYapildiHareketKaydiDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilIslemiYapilamadiHataDTO">
+    <sequence>
+     <element name="mernisNo" nillable="true" type="xsd:string"/>
+     <element name="hareketSiraNo" nillable="true" type="xsd:string"/>
+     <element name="hareketSigBitKodAciklama" nillable="true" type="xsd:string"/>
+     <element name="hareketSaglikStatusAciklama" nillable="true" type="xsd:string"/>
+     <element name="hareketMuhasebeReferansNo" nillable="true" type="xsd:string"/>
+     <element name="hareketTescilSigBasTar" nillable="true" type="xsd:string"/>
+     <element name="hareketTescilSigBitTar" nillable="true" type="xsd:string"/>
+     <element name="hareketGelirSeviyesiAciklama" nillable="true" type="xsd:string"/>
+     <element name="hareketGelirTestiTarihi" nillable="true" type="xsd:string"/>
+     <element name="kpsKisiVefatTarihi" nillable="true" type="xsd:string"/>
+     <element name="kpsKisiDurumBilgisi" nillable="true" type="xsd:string"/>
+     <element name="kpsYerlesimYeriAdresYeriHatasi" nillable="true" type="xsd:string"/>
+     <element name="kpsYerlesimYeriYurtDisiAdres" nillable="true" type="xsd:string"/>
+     <element name="kpsYerlesimYeriYurtDisiAdresSemt" nillable="true" type="xsd:string"/>
+     <element name="spasProvizyonSonucMesaji" nillable="true" type="xsd:string"/>
+     <element name="mosipHataMesaji" nillable="true" type="xsd:string"/>
+     <element name="hareketSaglikStatus" nillable="true" type="xsd:string"/>
+     <element name="yabanciKimlikNumaralariIcinIzinBaslangicTarihStr" nillable="true" type="xsd:string"/>
+     <element name="yabanciKimlikNumaralariIcinIzinBitisTarihStr" nillable="true" type="xsd:string"/>
+     <element name="kpsKisiCinsiyetKodu" nillable="true" type="xsd:string"/>
+     <element name="kpsKisiCinsiyetAciklama" nillable="true" type="xsd:string"/>
+     <element name="kpsKisiDogumTarihi" nillable="true" type="xsd:string"/>
+     <element name="hareketSigBitKod" nillable="true" type="xsd:string"/>
+     <element name="hareketGelirSeviyesi" nillable="true" type="xsd:string"/>
+     <element name="hareketDurumKod1" nillable="true" type="xsd:string"/>
+     <element name="hareketDurumKod1Aciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilIslemiYapildiHareketKaydiDTO">
+    <sequence>
+     <element name="mernisNo" nillable="true" type="xsd:string"/>
+     <element name="hareketSiraNo" nillable="true" type="xsd:string"/>
+     <element name="hareketSigBitKod" nillable="true" type="xsd:string"/>
+     <element name="hareketSigBitKodAciklama" nillable="true" type="xsd:string"/>
+     <element name="hareketSaglikStatus" nillable="true" type="xsd:string"/>
+     <element name="hareketSaglikStatusAciklama" nillable="true" type="xsd:string"/>
+     <element name="hareketMuhasebeReferansNo" nillable="true" type="xsd:string"/>
+     <element name="hareketTescilSigBasTar" nillable="true" type="xsd:string"/>
+     <element name="hareketTescilSigBitTar" nillable="true" type="xsd:string"/>
+     <element name="hareketIcinIPCUygulandi" type="xsd:boolean"/>
+     <element name="hareketTescilBelgeTar" nillable="true" type="xsd:string"/>
+     <element name="hareketKaydiTarihleriAraligindaAlinanMaxProvizyonTar" nillable="true" type="xsd:string"/>
+     <element name="hareketDurumKod1" nillable="true" type="xsd:string"/>
+     <element name="hareketDurumKod1Aciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GSSDysTebligatGuncellemeDTO">
+    <sequence>
+     <element name="sigortaliTcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="islemiYapanKullaniciTcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="belgeTuruStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+     <element name="sayacStr" nillable="true" type="xsd:string"/>
+     <element name="muhasebeIdStr" nillable="true" type="xsd:string"/>
+     <element name="dysDurumKodStr" nillable="true" type="xsd:string"/>
+     <element name="dysBarkodStr" nillable="true" type="xsd:string"/>
+     <element name="dysVarideNoStr" nillable="true" type="xsd:string"/>
+     <element name="dysVarideTarihStr" nillable="true" type="xsd:string"/>
+     <element name="dysBirimKoduStr" nillable="true" type="xsd:string"/>
+     <element name="dysDosyaKoduStr" nillable="true" type="xsd:string"/>
+     <element name="dysGonderimSekliKoduStr" nillable="true" type="xsd:string"/>
+     <element name="dysGonderimSekliAciklamaStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapGSSDysTebligatBilgileriDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="gssDysTebligatBilgileriDTO" nillable="true" type="tns2:ArrayOfGSSDysTebligatBilgileriDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="GSSDysTebligatBilgileriDTO">
+    <sequence>
+     <element name="sigortaliTCKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliAdiStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliSoyadiStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliAcikAdresStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliIlKodStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliIlAdiStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliIlceKodStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliSigBasTarStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliGelirTestiSonucStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliPrimTutarStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliIlceAdiStr" nillable="true" type="xsd:string"/>
+     <element name="gssDysTebligatIcinSayacNumarasiStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliHareketKaydiMuhasebeIdStr" nillable="true" type="xsd:string"/>
+     <element name="sigortaliAdresParca1Str" nillable="true" type="xsd:string"/>
+     <element name="sigortaliAdresParca2Str" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfGSSDysTebligatBilgileriDTO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="GSSDysTebligatBilgileriDTO" nillable="true" type="tns2:GSSDysTebligatBilgileriDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="GssTescilDokumDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+     <element name="belgeTurInt" type="xsd:int"/>
+     <element name="belgeUzantisiStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapGSSTescilDokumDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="tcKimklikNo" nillable="true" type="xsd:string"/>
+     <element name="belge" type="xsd:base64Binary"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilSorgulaDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParola" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapSigortaliBilgileriDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="tcKimlikNumarasi" nillable="true" type="xsd:string"/>
+     <element name="adi" nillable="true" type="xsd:string"/>
+     <element name="soyadi" nillable="true" type="xsd:string"/>
+     <element name="sigortaliBilgileriDTOArray" nillable="true" type="tns2:ArrayOfSigortaliBilgileriDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="SigortaliBilgileriDTO">
+    <sequence>
+     <element name="saglikStatusuAciklama" nillable="true" type="xsd:string"/>
+     <element name="tescilBaslangicTarihi" nillable="true" type="xsd:string"/>
+     <element name="tescilBitisTarihi" nillable="true" type="xsd:string"/>
+     <element name="gelirSeviyesiAciklama" nillable="true" type="xsd:string"/>
+     <element name="gelirTestiSonucTarihi" nillable="true" type="xsd:string"/>
+     <element name="tescilSonlandirmaNedeniAciklama" nillable="true" type="xsd:string"/>
+     <element name="muhasebeReferansNo" nillable="true" type="xsd:string"/>
+     <element name="saglikStatusuKod" nillable="true" type="xsd:string"/>
+     <element name="gelirSeviyesiKod" nillable="true" type="xsd:string"/>
+     <element name="tescilSonlandirmaNedeniKod" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfSigortaliBilgileriDTO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="SigortaliBilgileriDTO" nillable="true" type="tns2:SigortaliBilgileriDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevap60GBilgileriDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="tcKimlikNumarasi" nillable="true" type="xsd:string"/>
+     <element name="adi" nillable="true" type="xsd:string"/>
+     <element name="soyadi" nillable="true" type="xsd:string"/>
+     <element name="sigortalinin60GYadaKismiSureli60GKapsamindaGecerliHareketKaydiVar" type="xsd:boolean"/>
+     <element name="sigortaliBilgileriDTOArray" nillable="true" type="tns2:ArrayOfSigortaliBilgileriDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilSilDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="muhasebeId" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParola" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GssTescilPdfDokumBarkodluDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapGSSTescilPdfDokumBarkodluDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="karekod" nillable="true" type="xsd:string"/>
+     <element name="barkodluPdfBelgesi" type="xsd:base64Binary"/>
+     <element name="tcKimklikNo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GSSDysTebligatSorgulamaDTO">
+    <sequence>
+     <element name="sigortaliTcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="islemiYapanKullaniciTcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="belgeTuruStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TCKimlikIcinBarkodluBelgeListesiDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+     <element name="belgeTurInt" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapGSSTescilBarkodluBelgeListesiDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="tcKimklikNo" nillable="true" type="xsd:string"/>
+     <element name="belgelerArr" nillable="true" type="tns2:ArrayOfGSSTescilMosipBorcPdfBelgeDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="GSSTescilMosipBorcPdfBelgeDTO">
+    <sequence>
+     <element name="BELGE_ID" type="xsd:long"/>
+     <element name="TC_KIMLIK_NO" type="xsd:long"/>
+     <element name="BARCODE_ID" nillable="true" type="xsd:string"/>
+     <element name="PDF_PATH" nillable="true" type="xsd:string"/>
+     <element name="ADI" nillable="true" type="xsd:string"/>
+     <element name="SOYADI" nillable="true" type="xsd:string"/>
+     <element name="DURUM_KOD1" type="xsd:int"/>
+     <element name="DURUM_KOD2" nillable="true" type="xsd:string"/>
+     <element name="ISLEM_TARIHI" nillable="true" type="xsd:string"/>
+     <element name="ISLEM_ZAMANI" nillable="true" type="xsd:string"/>
+     <element name="GSH_KULL_AYIRACI" nillable="true" type="xsd:string"/>
+     <element name="GSH_KULLANICI_KODU" type="xsd:long"/>
+     <element name="GSH_UNITE" type="xsd:long"/>
+     <element name="islemYapanKullaniciAdiSoyadiStr" nillable="true" type="xsd:string"/>
+     <element name="islemYapanKullaniciUniteAciklamaStr" nillable="true" type="xsd:string"/>
+     <element name="siraNoStr" nillable="true" type="xsd:string"/>
+     <element name="dokumunAlindigiUygulamaAdi" nillable="true" type="xsd:string"/>
+     <element name="BELGE_TUR" type="xsd:int"/>
+     <element name="belgeTurAciklamaStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfGSSTescilMosipBorcPdfBelgeDTO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="GSSTescilMosipBorcPdfBelgeDTO" nillable="true" type="tns2:GSSTescilMosipBorcPdfBelgeDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilSonlandirDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="muhasebeId" nillable="true" type="xsd:string"/>
+     <element name="sonlandirmaTarihiStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParola" nillable="true" type="xsd:string"/>
+     <element name="sonlandirmaKoduStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilIslemleriDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="iptalEdilecekHareketKaydiMuhasebeIdStr" nillable="true" type="xsd:string"/>
+     <element name="batchUygulamasiEkranKoduStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParolaStr" nillable="true" type="xsd:string"/>
+     <element name="iptalEdilecekHareketKaydiSigBitKodStr" nillable="true" type="xsd:string"/>
+     <element name="yeniHareketKaydiSaglikStatusuStr" nillable="true" type="xsd:string"/>
+     <element name="yeniHareketKaydiSigBasTarStr" nillable="true" type="xsd:string"/>
+     <element name="yeniHareketKaydiSigBitTarStr" nillable="true" type="xsd:string"/>
+     <element name="yeniHareketKaydiDurumKod1Str" nillable="true" type="xsd:string"/>
+     <element name="yeniHareketKaydiGelirTestiTarihiStr" nillable="true" type="xsd:string"/>
+     <element name="yeniHareketKaydiGelirSeviyesiInt" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="TescilSorgulaKapsamTarihIleDTO">
+    <sequence>
+     <element name="tcKimlikNoStr" nillable="true" type="xsd:string"/>
+     <element name="kullaniciParola" nillable="true" type="xsd:string"/>
+     <element name="kapsamlarStrArray" nillable="true" type="tns2:ArrayOf_329501307_1440052060_nillable_string"/>
+     <element name="tarihBilgisiStr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_329501307_1440052060_nillable_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapMuhasebeKisiBilgisiSorgulaDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="muhasebeKisiTescilBilgiDTOArray" nillable="true" type="tns2:ArrayOfMuhasebeKisiTescilBilgiDTO"/>
+     <element name="muhasebeSonucKod" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="MuhasebeKisiTescilBilgiDTO">
+    <sequence>
+     <element name="hizmetGun" type="xsd:int"/>
+     <element name="kapsam" type="xsd:int"/>
+     <element name="kapsamAciklama" nillable="true" type="xsd:string"/>
+     <element name="tescilBaslangicTarihi" nillable="true" type="xsd:string"/>
+     <element name="tescilBitisTarihi" nillable="true" type="xsd:string"/>
+     <element name="bagliReferansNo" nillable="true" type="xsd:string"/>
+     <element name="durum" nillable="true" type="xsd:string"/>
+     <element name="durumAciklama" nillable="true" type="xsd:string"/>
+     <element name="gelirTestiSonucTarihi" nillable="true" type="xsd:string"/>
+     <element name="hakSahibi18YasAlti" type="xsd:int"/>
+     <element name="referansNo" nillable="true" type="xsd:string"/>
+     <element name="sonlandirmaNedeni" type="xsd:int"/>
+     <element name="sonlandirmaNedeniAciklama" nillable="true" type="xsd:string"/>
+     <element name="tescilNedeni" type="xsd:int"/>
+     <element name="tescilNedeniAciklama" nillable="true" type="xsd:string"/>
+     <element name="uniteNo" nillable="true" type="xsd:string"/>
+     <element name="uzerindenTckn" nillable="true" type="xsd:string"/>
+     <element name="belgeTarihi" nillable="true" type="xsd:string"/>
+     <element name="gelirSeviye" type="xsd:int"/>
+     <element name="gelirSeviyeAciklama" nillable="true" type="xsd:string"/>
+     <element name="muhasebeDurum" type="xsd:int"/>
+     <element name="muhasebeDurumAciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfMuhasebeKisiTescilBilgiDTO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="MuhasebeKisiTescilBilgiDTO" nillable="true" type="tns2:MuhasebeKisiTescilBilgiDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="WebServisCevapGelirTestiSonucBilgileriDTO">
+    <sequence>
+     <element name="sonucKod" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="kpsNufusDTO" nillable="true" type="tns2:KpsNufusDTO"/>
+     <element name="gelirTestiSonucBildirDTOArray" nillable="true" type="tns2:ArrayOfGelirTestiSonucBildirDTO"/>
+    </sequence>
+   </complexType>
+   <complexType name="KpsNufusDTO">
+    <sequence>
+     <element name="TC_KIMLIK_NO" type="xsd:long"/>
+     <element name="DURUMU" type="xsd:int"/>
+     <element name="UYRUK" type="xsd:int"/>
+     <element name="BABA_TC_KIMLIK_NO" type="xsd:long"/>
+     <element name="ANNE_TC_KIMLIK_NO" type="xsd:long"/>
+     <element name="DOGUM_TARIHI" nillable="true" type="xsd:string"/>
+     <element name="MEDENI_HAL" type="xsd:int"/>
+     <element name="CINSIYET" nillable="true" type="xsd:string"/>
+     <element name="IL_KODU" type="xsd:int"/>
+     <element name="ILCE_KODU" type="xsd:int"/>
+     <element name="CILT_NO" type="xsd:int"/>
+     <element name="AILE_SIRA_NO" type="xsd:int"/>
+     <element name="BIREY_SIRA_NO" type="xsd:int"/>
+     <element name="OLUM_TARIHI" nillable="true" type="xsd:string"/>
+     <element name="ADI" nillable="true" type="xsd:string"/>
+     <element name="SOYADI" nillable="true" type="xsd:string"/>
+     <element name="ILK_SOYADI" nillable="true" type="xsd:string"/>
+     <element name="DOGUM_YERI" nillable="true" type="xsd:string"/>
+     <element name="MAHALLE_KOY" nillable="true" type="xsd:string"/>
+     <element name="BABA_ADI" nillable="true" type="xsd:string"/>
+     <element name="ANA_ADI" nillable="true" type="xsd:string"/>
+     <element name="GUNCELLEME_TARIHI" nillable="true" type="xsd:string"/>
+     <element name="GUNCELLEME_ZAMANI" nillable="true" type="xsd:string"/>
+     <element name="DEGISTIREN_KODU" nillable="true" type="xsd:string"/>
+     <element name="MK" nillable="true" type="xsd:string"/>
+     <element name="DFLAG" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GelirTestiSonucBildirDTO">
+    <sequence>
+     <element name="tcKimlikNo" type="xsd:long"/>
+     <element name="yakinlikAciklama" nillable="true" type="xsd:string"/>
+     <element name="uzerindenTcKimlikNo" type="xsd:long"/>
+     <element name="gelirSeviyeAciklama" nillable="true" type="xsd:string"/>
+     <element name="gelirTestiSonucSonuclanmaTarihi" nillable="true" type="xsd:string"/>
+     <element name="siraNo" type="xsd:int"/>
+     <element name="ilAdi" nillable="true" type="xsd:string"/>
+     <element name="ilceAdi" nillable="true" type="xsd:string"/>
+     <element name="sayac" type="xsd:long"/>
+     <element name="basvuruTarihi" nillable="true" type="xsd:string"/>
+     <element name="bildirimNedeni" nillable="true" type="xsd:string"/>
+     <element name="telefonNo" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="bildirimIslemTarihi" nillable="true" type="xsd:string"/>
+     <element name="gelirTestiId" type="xsd:long"/>
+     <element name="itirazGelirTestiId" type="xsd:long"/>
+     <element name="gelirTestiTutar" type="xsd:double"/>
+     <element name="itirazHeyetKararTarihi" nillable="true" type="xsd:string"/>
+     <element name="gelirTestiSonucBitisTarihi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfGelirTestiSonucBildirDTO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="GelirTestiSonucBildirDTO" nillable="true" type="tns2:GelirTestiSonucBildirDTO"/>
+    </sequence>
+   </complexType>
+  </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.tescil.gss.sgk.gov.tr" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns2="http://dto.tescil.gss.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dto.tescil.gss.sgk.gov.tr"/>
+   <element name="tescilKaydetResponse">
+    <complexType>
+     <sequence>
+      <element name="tescilKaydetReturn" nillable="true" type="tns2:WebServisCevapDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelle">
+    <complexType>
+     <sequence>
+      <element name="gssDysTebligatGuncellemeDTO" nillable="true" type="tns2:GSSDysTebligatGuncellemeDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleResponse">
+    <complexType>
+     <sequence>
+      <element name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleReturn" nillable="true" type="tns2:WebServisCevapGSSDysTebligatBilgileriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTescilMuhasebeBorcDokumBelgeOlustur">
+    <complexType>
+     <sequence>
+      <element name="gssTescilDokumDTO" nillable="true" type="tns2:GssTescilDokumDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTescilMuhasebeBorcDokumBelgeOlusturResponse">
+    <complexType>
+     <sequence>
+      <element name="gssTescilMuhasebeBorcDokumBelgeOlusturReturn" nillable="true" type="tns2:WebServisCevapGSSTescilDokumDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilSorgula">
+    <complexType>
+     <sequence>
+      <element name="tescilSorgulaDTO" nillable="true" type="tns2:TescilSorgulaDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilSorgulaResponse">
+    <complexType>
+     <sequence>
+      <element name="tescilSorgulaReturn" nillable="true" type="tns2:WebServisCevapSigortaliBilgileriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgula">
+    <complexType>
+     <sequence>
+      <element name="tescilSorgulaDTO" nillable="true" type="tns2:TescilSorgulaDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaResponse">
+    <complexType>
+     <sequence>
+      <element name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaReturn" nillable="true" type="tns2:WebServisCevap60GBilgileriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilSil">
+    <complexType>
+     <sequence>
+      <element name="tescilSilDTO" nillable="true" type="tns2:TescilSilDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilSilResponse">
+    <complexType>
+     <sequence>
+      <element name="tescilSilReturn" nillable="true" type="tns2:WebServisCevapDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlustur">
+    <complexType>
+     <sequence>
+      <element name="gssTescilPdfDokumBarkodluDTO" nillable="true" type="tns2:GssTescilPdfDokumBarkodluDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturResponse">
+    <complexType>
+     <sequence>
+      <element name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturReturn" nillable="true" type="tns2:WebServisCevapGSSTescilPdfDokumBarkodluDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgula">
+    <complexType>
+     <sequence>
+      <element name="gssDysTebligatSorgulamaDTO" nillable="true" type="tns2:GSSDysTebligatSorgulamaDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaResponse">
+    <complexType>
+     <sequence>
+      <element name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaReturn" nillable="true" type="tns2:WebServisCevapGSSDysTebligatBilgileriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="muhasebeBorcPdfDokumBarkodluBelgeOlustur">
+    <complexType>
+     <sequence>
+      <element name="gssTescilPdfDokumBarkodluDTO" nillable="true" type="tns2:GssTescilPdfDokumBarkodluDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="muhasebeBorcPdfDokumBarkodluBelgeOlusturResponse">
+    <complexType>
+     <sequence>
+      <element name="muhasebeBorcPdfDokumBarkodluBelgeOlusturReturn" nillable="true" type="tns2:WebServisCevapGSSTescilPdfDokumBarkodluDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetir">
+    <complexType>
+     <sequence>
+      <element name="tcKimlikIcinBarkodluBelgeListesiDTO" nillable="true" type="tns2:TCKimlikIcinBarkodluBelgeListesiDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirResponse">
+    <complexType>
+     <sequence>
+      <element name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirReturn" nillable="true" type="tns2:WebServisCevapGSSTescilBarkodluBelgeListesiDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilSonlandir">
+    <complexType>
+     <sequence>
+      <element name="tescilSonlandirDTO" nillable="true" type="tns2:TescilSonlandirDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilSonlandirResponse">
+    <complexType>
+     <sequence>
+      <element name="tescilSonlandirReturn" nillable="true" type="tns2:WebServisCevapDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYap">
+    <complexType>
+     <sequence>
+      <element name="tescilIslemleriDTO" nillable="true" type="tns2:TescilIslemleriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapResponse">
+    <complexType>
+     <sequence>
+      <element name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapReturn" nillable="true" type="tns2:WebServisCevapDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgula">
+    <complexType>
+     <sequence>
+      <element name="tescilSorgulaKapsamTarihIleDTO" nillable="true" type="tns2:TescilSorgulaKapsamTarihIleDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaResponse">
+    <complexType>
+     <sequence>
+      <element name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaReturn" nillable="true" type="tns2:WebServisCevap60GBilgileriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="muhasebeKisiBilgisiSorgula">
+    <complexType>
+     <sequence>
+      <element name="tescilSorgulaDTO" nillable="true" type="tns2:TescilSorgulaDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="muhasebeKisiBilgisiSorgulaResponse">
+    <complexType>
+     <sequence>
+      <element name="muhasebeKisiBilgisiSorgulaReturn" nillable="true" type="tns2:WebServisCevapMuhasebeKisiBilgisiSorgulaDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kisiIcinGelirTestiSonucSorgula">
+    <complexType>
+     <sequence>
+      <element name="tescilSorgulaDTO" nillable="true" type="tns2:TescilSorgulaDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="kisiIcinGelirTestiSonucSorgulaResponse">
+    <complexType>
+     <sequence>
+      <element name="kisiIcinGelirTestiSonucSorgulaReturn" nillable="true" type="tns2:WebServisCevapGelirTestiSonucBilgileriDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tescilKaydet">
+    <complexType>
+     <sequence>
+      <element name="tescilKaydetDTO" nillable="true" type="tns2:TescilKaydetDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  </wsdl:types>
+  <wsdl:message name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturRequest">
+    <wsdl:part element="impl:gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlustur" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaRequest">
+    <wsdl:part element="impl:kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgula" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilKaydetRequest">
+    <wsdl:part element="impl:tescilKaydet" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilKaydetResponse">
+    <wsdl:part element="impl:tescilKaydetResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapRequest">
+    <wsdl:part element="impl:tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYap" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaResponse">
+    <wsdl:part element="impl:gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapResponse">
+    <wsdl:part element="impl:tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaResponse">
+    <wsdl:part element="impl:kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilSorgulaRequest">
+    <wsdl:part element="impl:tescilSorgula" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="kisiIcinGelirTestiSonucSorgulaRequest">
+    <wsdl:part element="impl:kisiIcinGelirTestiSonucSorgula" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilSonlandirRequest">
+    <wsdl:part element="impl:tescilSonlandir" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirRequest">
+    <wsdl:part element="impl:tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetir" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="muhasebeKisiBilgisiSorgulaRequest">
+    <wsdl:part element="impl:muhasebeKisiBilgisiSorgula" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturResponse">
+    <wsdl:part element="impl:gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaRequest">
+    <wsdl:part element="impl:kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgula" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="muhasebeBorcPdfDokumBarkodluBelgeOlusturResponse">
+    <wsdl:part element="impl:muhasebeBorcPdfDokumBarkodluBelgeOlusturResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleRequest">
+    <wsdl:part element="impl:gssTesTahTakipEk1Ek2IcinDysTebligatGuncelle" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTescilMuhasebeBorcDokumBelgeOlusturRequest">
+    <wsdl:part element="impl:gssTescilMuhasebeBorcDokumBelgeOlustur" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaResponse">
+    <wsdl:part element="impl:kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilSorgulaResponse">
+    <wsdl:part element="impl:tescilSorgulaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirResponse">
+    <wsdl:part element="impl:tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilSonlandirResponse">
+    <wsdl:part element="impl:tescilSonlandirResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilSilResponse">
+    <wsdl:part element="impl:tescilSilResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTescilMuhasebeBorcDokumBelgeOlusturResponse">
+    <wsdl:part element="impl:gssTescilMuhasebeBorcDokumBelgeOlusturResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="kisiIcinGelirTestiSonucSorgulaResponse">
+    <wsdl:part element="impl:kisiIcinGelirTestiSonucSorgulaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="muhasebeKisiBilgisiSorgulaResponse">
+    <wsdl:part element="impl:muhasebeKisiBilgisiSorgulaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tescilSilRequest">
+    <wsdl:part element="impl:tescilSil" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="muhasebeBorcPdfDokumBarkodluBelgeOlusturRequest">
+    <wsdl:part element="impl:muhasebeBorcPdfDokumBarkodluBelgeOlustur" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleResponse">
+    <wsdl:part element="impl:gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaRequest">
+    <wsdl:part element="impl:gssTesTahTakipEk1Ek2IcinDysTebligatSorgula" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GSSTescilIslemleriWS">
+    <wsdl:operation name="tescilKaydet">
+      <wsdl:input message="impl:tescilKaydetRequest" name="tescilKaydetRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:tescilKaydetResponse" name="tescilKaydetResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelle">
+      <wsdl:input message="impl:gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleRequest" name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleResponse" name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTescilMuhasebeBorcDokumBelgeOlustur">
+      <wsdl:input message="impl:gssTescilMuhasebeBorcDokumBelgeOlusturRequest" name="gssTescilMuhasebeBorcDokumBelgeOlusturRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:gssTescilMuhasebeBorcDokumBelgeOlusturResponse" name="gssTescilMuhasebeBorcDokumBelgeOlusturResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilSorgula">
+      <wsdl:input message="impl:tescilSorgulaRequest" name="tescilSorgulaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:tescilSorgulaResponse" name="tescilSorgulaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgula">
+      <wsdl:input message="impl:kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaRequest" name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaResponse" name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilSil">
+      <wsdl:input message="impl:tescilSilRequest" name="tescilSilRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:tescilSilResponse" name="tescilSilResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlustur">
+      <wsdl:input message="impl:gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturRequest" name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturResponse" name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgula">
+      <wsdl:input message="impl:gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaRequest" name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaResponse" name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="muhasebeBorcPdfDokumBarkodluBelgeOlustur">
+      <wsdl:input message="impl:muhasebeBorcPdfDokumBarkodluBelgeOlusturRequest" name="muhasebeBorcPdfDokumBarkodluBelgeOlusturRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:muhasebeBorcPdfDokumBarkodluBelgeOlusturResponse" name="muhasebeBorcPdfDokumBarkodluBelgeOlusturResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetir">
+      <wsdl:input message="impl:tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirRequest" name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirResponse" name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilSonlandir">
+      <wsdl:input message="impl:tescilSonlandirRequest" name="tescilSonlandirRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:tescilSonlandirResponse" name="tescilSonlandirResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYap">
+      <wsdl:input message="impl:tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapRequest" name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapResponse" name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgula">
+      <wsdl:input message="impl:kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaRequest" name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaResponse" name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="muhasebeKisiBilgisiSorgula">
+      <wsdl:input message="impl:muhasebeKisiBilgisiSorgulaRequest" name="muhasebeKisiBilgisiSorgulaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:muhasebeKisiBilgisiSorgulaResponse" name="muhasebeKisiBilgisiSorgulaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kisiIcinGelirTestiSonucSorgula">
+      <wsdl:input message="impl:kisiIcinGelirTestiSonucSorgulaRequest" name="kisiIcinGelirTestiSonucSorgulaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:kisiIcinGelirTestiSonucSorgulaResponse" name="kisiIcinGelirTestiSonucSorgulaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GSSTescilIslemleriWSSoapBinding" type="impl:GSSTescilIslemleriWS">
+<wsaw:UsingAddressing wsdl:required="false"/>
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="tescilKaydet">
+      <wsdlsoap:operation soapAction="tescilKaydet"/>
+      <wsdl:input name="tescilKaydetRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tescilKaydetResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelle">
+      <wsdlsoap:operation soapAction="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelle"/>
+      <wsdl:input name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gssTesTahTakipEk1Ek2IcinDysTebligatGuncelleResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTescilMuhasebeBorcDokumBelgeOlustur">
+      <wsdlsoap:operation soapAction="gssTescilMuhasebeBorcDokumBelgeOlustur"/>
+      <wsdl:input name="gssTescilMuhasebeBorcDokumBelgeOlusturRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gssTescilMuhasebeBorcDokumBelgeOlusturResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilSorgula">
+      <wsdlsoap:operation soapAction="tescilSorgula"/>
+      <wsdl:input name="tescilSorgulaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tescilSorgulaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgula">
+      <wsdlsoap:operation soapAction="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgula"/>
+      <wsdl:input name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="kisiIcin60GKapsamindaGecerliHareketKaydiOlupOlmadiginiSorgulaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilSil">
+      <wsdlsoap:operation soapAction="tescilSil"/>
+      <wsdl:input name="tescilSilRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tescilSilResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlustur">
+      <wsdlsoap:operation soapAction="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlustur"/>
+      <wsdl:input name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gssTescilSigortaliBilgileriPdfDokumBarkodluBelgeOlusturResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgula">
+      <wsdlsoap:operation soapAction="gssTesTahTakipEk1Ek2IcinDysTebligatSorgula"/>
+      <wsdl:input name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gssTesTahTakipEk1Ek2IcinDysTebligatSorgulaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="muhasebeBorcPdfDokumBarkodluBelgeOlustur">
+      <wsdlsoap:operation soapAction="muhasebeBorcPdfDokumBarkodluBelgeOlustur"/>
+      <wsdl:input name="muhasebeBorcPdfDokumBarkodluBelgeOlusturRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="muhasebeBorcPdfDokumBarkodluBelgeOlusturResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetir">
+      <wsdlsoap:operation soapAction="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetir"/>
+      <wsdl:input name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tcKimlikNumarasiIcinPdfDokumBarkodluBelgeListesiGetirResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilSonlandir">
+      <wsdlsoap:operation soapAction="tescilSonlandir"/>
+      <wsdl:input name="tescilSonlandirRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tescilSonlandirResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYap">
+      <wsdlsoap:operation soapAction="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYap"/>
+      <wsdl:input name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tescilKaydiIcin7143SkGoreTescilGuncellemeIslemiYapResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgula">
+      <wsdlsoap:operation soapAction="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgula"/>
+      <wsdl:input name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="kisiIcinIlgiliKapsamlardaGecerliHareketKaydiSorgulaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="muhasebeKisiBilgisiSorgula">
+      <wsdlsoap:operation soapAction="muhasebeKisiBilgisiSorgula"/>
+      <wsdl:input name="muhasebeKisiBilgisiSorgulaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="muhasebeKisiBilgisiSorgulaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kisiIcinGelirTestiSonucSorgula">
+      <wsdlsoap:operation soapAction="kisiIcinGelirTestiSonucSorgula"/>
+      <wsdl:input name="kisiIcinGelirTestiSonucSorgulaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="kisiIcinGelirTestiSonucSorgulaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GSSTescilIslemleriWSService">
+    <wsdl:port binding="impl:GSSTescilIslemleriWSSoapBinding" name="GSSTescilIslemleriWS">
+      <wsdlsoap:address location="http://uygkamu.sgk.gov.tr:80/WS_GSS60MaddeTescil/services/GSSTescilIslemleriWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

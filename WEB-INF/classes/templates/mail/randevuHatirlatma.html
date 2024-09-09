@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>YURTDIŞI BİLGİ YÖNETİM RANDEVU SİSTEMİ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- <link rel="stylesheet" type="text/css" -->
+<!-- 	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+
+<link rel="stylesheet" th:href="@{/css/main.css}"
+	href="../../css/main.css" />
+
+</head>
+<body class="center">
+<div>
+	<table>
+	<tr>
+	<td colspan="2"><a href="https://ytybs.ailevecalisma.gov.tr"><center>YURTDIŞI
+					BİLGİ YÖNETİM RANDEVU SİSTEMİ</center></a></td>
+	</tr>
+	<tr>
+		<td class="ortala" rowspan="2"><a href="https://www.csgb.gov.tr/"><img alt="" src="https://ytybs.ailevecalisma.gov.tr/assets/img/logo.png"></a></td>
+		<td>YURT DIŞI TEŞKİLATI BİLGİ YÖNETİM SİSTEMİ (YTBYS)</td>
+	</tr>
+	
+	<tr><td>RANDEVU SİSTEMİ</td></tr>
+
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+
+	<table>
+	<tr>
+		<td><h1>Randevu Hatırlatma Mesajı</h1></td>
+	</tr>
+	<tr>
+		<td>Sayın <b><span th:text="${isim}"></span></b>, <br />
+			<b><span th:text="${tarih}"></span> </b>tarihinde bilgileri aşağıda yer alan bir randevunuz bulunduğunu hatırlatmak isteriz.
+		</td>
+	</tr>
+	</table>
+		
+	<table>
+	<tr>
+		<td> <br ></td>
+	</tr>
+
+	<tr>
+		<td>Birim</td>
+		<td><span th:text="${birim}"></span></td>
+	</tr>
+	<tr>
+		<td>Randevu Yeri</td>
+		<td><span th:text="${randevuYeri}"></span></td>
+	</tr>
+	<tr>
+		<td>Görevli</td>
+		<td><span th:text="${gorevli}"></span></td>
+	</tr>
+	<tr>
+		<td>Randevu Zamanı</td>
+		<td><span th:text="${randevuZamani}"></span></td>
+	</tr>
+	</table>
+
+	<table>
+	<tr>
+		<td>Randevunuza gelemeyecekseniz <a href="https://ytybs.ailevecalisma.gov.tr">buraya</a> tıklayarak randevunuzu iptal edebilirsiniz.</td>
+	</tr>
+	<tr>
+		<td>İyi günler dileriz.</td>
+	</tr>
+	</table>
+
+	<table>
+	<tr>
+		<td><a href="https://tr-tr.facebook.com/"><img height="50" width="50"  alt="" src="../../images/facebookIcon.jpg"></a></td>
+		<td><a href="https://twitter.com/"><img height="50" width="50" alt="" src="../../images/twitterIcon.jpg"></a></td>
+	</tr>
+	</table>
+	<table>
+	<tr>
+		<td>Bu e-posta kişiye özel bilgi içermektedir. Eğer bu iletinin bilginiz dahilinde gönderilmediğini düşünüyorsanız yardimmasasi@ailevecalisma.gov.tr adresine bildirimde bulunabilirsiniz. </td>
+	</tr>
+	<tr>
+		<td>Sizden kişisel bilgilerinizi veya YTBYS parolanızı telefon, e-posta v.b. yollar ile isteyen kişilere karşı dikkatli olunuz, bilgilerinizi vermeyiniz. </td>
+	</tr>
+	<tr>
+		<td>Tarayıcınızın adres çubuğundaki adresin sonunda <b>gov.tr</b> (https://ytbys-ailevecalisma.gov.tr) olmasına dikkat ediniz. </td>
+	</tr>
+	</table>
+</div>
+
+
+<!--
+	<div class="center">
+		<div class="center">
+			<a class="center" href="https://www.ytbys.ailevecalisma.gov.tr">YURTDIŞI
+				BİLGİ YÖNETİM RANDEVU SİSTEMİ</a>
+		</div>
+		<div id="center" class="center">
+			<tr>
+				<td><img alt="" src="../images/logo_demo.jpg"></td>
+				<td><span>YURT DIŞI TEŞKİLATI BİLGİ YÖNETİM
+						SİSTEMİ(YTBYS)</span>
+					<span>RANDEVU SİSTEMİ</span></td>
+			</tr>
+		</div>
+	</div>
+
+	<div class="center">
+
+		<div class="center">
+			<h1>Randevu hatırlatma mesajı</h1>
+		</div>
+		<div class="center">
+			<h1>Sayın th:text="'isim: ' + ${message}"</h1>
+			<h1>th:text="'tarih: ' + ${message} " tarihinde bilgileri aşağıda yer alan bir randevunuz bulunduğunu hatırlatmak isteriz.</h1>
+		</div>
+
+	</div>
+	 
+	
+		<div class="center">
+
+		<div class="center">
+			<h1>Randevu hatırlatma mesajı</h1>
+			<h2>
+				<span th:text="'Message: ' + ${message}"></span>
+			</h2>
+		</div>
+
+	</div>
+	
+-->
+	<!-- /.container -->
+
+<!-- 	<script type="text/javascript" -->
+<!-- 		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+</body>
+</html>

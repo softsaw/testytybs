@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.dys.sgk.gov.tr" xmlns:impl="http://ws.dys.sgk.gov.tr" xmlns:intf="http://ws.dys.sgk.gov.tr" xmlns:tns2="http://dvo.ws.dys.sgk.gov.tr" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://dvo.ws.dys.sgk.gov.tr" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://ws.dys.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://ws.dys.sgk.gov.tr"/>
+   <complexType name="DYSIsAkisiDVO">
+    <sequence>
+     <element name="dagitimListesi" nillable="true" type="tns2:ArrayOfBirimDVO"/>
+     <element name="onayListesi" nillable="true" type="tns2:ArrayOfPersonelDVO"/>
+     <element name="dosyaListesi" nillable="true" type="tns2:ArrayOfDosyaDVO"/>
+     <element name="konu" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="tcKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="fileContent" type="xsd:base64Binary"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="sonuc" nillable="true" type="xsd:string"/>
+     <element name="fileName" nillable="true" type="xsd:string"/>
+     <element name="mimeType" nillable="true" type="xsd:string"/>
+     <element name="fileExtention" nillable="true" type="xsd:string"/>
+     <element name="personel_id" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="BirimDVO">
+    <sequence>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="otomasyonDisi" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfBirimDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BirimDVO" nillable="true" type="tns2:BirimDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="PersonelDVO">
+    <sequence>
+     <element name="personel_id" nillable="true" type="xsd:string"/>
+     <element name="adi" nillable="true" type="xsd:string"/>
+     <element name="soyadi" nillable="true" type="xsd:string"/>
+     <element name="rolu_kod" nillable="true" type="xsd:string"/>
+     <element name="rolu_aciklama" nillable="true" type="xsd:string"/>
+     <element name="birim_id" nillable="true" type="xsd:string"/>
+     <element name="personelgorevlendirmeId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfPersonelDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PersonelDVO" nillable="true" type="tns2:PersonelDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="DosyaDVO">
+    <sequence>
+     <element name="dosyaNo" nillable="true" type="xsd:string"/>
+     <element name="dosyaId" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="iliskiliGorevlendirmeVar" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfDosyaDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="DosyaDVO" nillable="true" type="tns2:DosyaDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="Emektar4CDVO">
+    <sequence>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="evrakinDurumu" nillable="true" type="xsd:string"/>
+     <element name="evrakTipi" nillable="true" type="xsd:string"/>
+     <element name="evrakIslemYapanKullanici" nillable="true" type="xsd:string"/>
+     <element name="evrakVarideNo" nillable="true" type="xsd:string"/>
+     <element name="evrakVarideTarihi" nillable="true" type="xsd:string"/>
+     <element name="evrakIslemYapanKullaniciRolu" nillable="true" type="xsd:string"/>
+     <element name="evrakBirimKayitTarihi" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="ggEvrakId" nillable="true" type="xsd:string"/>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="baslangicTarihi" nillable="true" type="xsd:string"/>
+     <element name="bitisTarihi" nillable="true" type="xsd:string"/>
+     <element name="evrakStatu" nillable="true" type="xsd:string"/>
+     <element name="evrakTipiListesi" nillable="true" type="tns2:ArrayOf_1059928948_1440052060_nillable_string"/>
+     <element name="konusu" nillable="true" type="xsd:string"/>
+     <element name="wsKullaniciAdi" nillable="true" type="xsd:string"/>
+     <element name="wsSifre" nillable="true" type="xsd:string"/>
+     <element name="uygulamaAdi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_1059928948_1440052060_nillable_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Emektar4CSonucDVO">
+    <sequence>
+     <element name="sonucKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+     <element name="evrakList" nillable="true" type="tns2:ArrayOfEmektar4CDVO"/>
+     <element name="SGKBirimList" nillable="true" type="tns2:ArrayOfSGKEBYSBirimDVO"/>
+     <element name="evrakTipList" nillable="true" type="tns2:ArrayOfArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfEmektar4CDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Emektar4CDVO" nillable="true" type="tns2:Emektar4CDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="SGKEBYSBirimDVO">
+    <sequence>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="birimOrgKodu" nillable="true" type="xsd:string"/>
+     <element name="birimAdres" nillable="true" type="xsd:string"/>
+     <element name="birimParentId" nillable="true" type="xsd:string"/>
+     <element name="birimBagliOlduguVezne" nillable="true" type="xsd:string"/>
+     <element name="birimDetsisNo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfSGKEBYSBirimDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="SGKEBYSBirimDVO" nillable="true" type="tns2:SGKEBYSBirimDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfArrayOf_1059928948_1440052060_nillable_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ArrayOf_153925627_1440052060_nillable_string" nillable="true" type="impl:ArrayOf_153925627_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="BirimKarneDVO">
+    <sequence>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="birimKayitTarihi" nillable="true" type="xsd:string"/>
+     <element name="cevaplanmaTarihi" nillable="true" type="xsd:string"/>
+     <element name="ggEvrakId" nillable="true" type="xsd:string"/>
+     <element name="baslangicTarihi" nillable="true" type="xsd:string"/>
+     <element name="bitisTarihi" nillable="true" type="xsd:string"/>
+     <element name="birimKodu" nillable="true" type="xsd:string"/>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaji" nillable="true" type="xsd:string"/>
+     <element name="toplamCevaplananEvrakSayisi" nillable="true" type="xsd:string"/>
+     <element name="cevaplanmaSuresi" nillable="true" type="xsd:string"/>
+     <element name="ortalamaCevapSuresi" nillable="true" type="xsd:string"/>
+     <element name="puan" nillable="true" type="xsd:string"/>
+     <element name="borcuYokturBelgesi" type="xsd:boolean"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="cevaplananEvraklarCevapEvraklari" nillable="true" type="tns2:ArrayOf_1059928948_1440052060_nillable_string"/>
+     <element name="cevapEvrakVarideNo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Emektar4A4BDVO">
+    <sequence>
+     <element name="personelSicilNo" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="birimListesi" nillable="true" type="tns2:ArrayOfEmektar4A4BBirimListesiDVO"/>
+     <element name="onayciListesi" nillable="true" type="tns2:ArrayOfEmektar4A4BOnayciListesiDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="Emektar4A4BBirimListesiDVO">
+    <sequence>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="rolId" nillable="true" type="xsd:string"/>
+     <element name="rolAdi" nillable="true" type="xsd:string"/>
+     <element name="personelId" nillable="true" type="xsd:string"/>
+     <element name="personeGorevlendirmelId" nillable="true" type="xsd:string"/>
+     <element name="personelAd" nillable="true" type="xsd:string"/>
+     <element name="personelSoyad" nillable="true" type="xsd:string"/>
+     <element name="sicilNo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfEmektar4A4BBirimListesiDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Emektar4A4BBirimListesiDVO" nillable="true" type="tns2:Emektar4A4BBirimListesiDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="Emektar4A4BOnayciListesiDVO">
+    <sequence>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="personelId" nillable="true" type="xsd:string"/>
+     <element name="rolId" nillable="true" type="xsd:string"/>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="personelAd" nillable="true" type="xsd:string"/>
+     <element name="personelSoyad" nillable="true" type="xsd:string"/>
+     <element name="rolAdi" nillable="true" type="xsd:string"/>
+     <element name="sicilNo" nillable="true" type="xsd:string"/>
+     <element name="personelGorevlendirmeId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfEmektar4A4BOnayciListesiDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Emektar4A4BOnayciListesiDVO" nillable="true" type="tns2:Emektar4A4BOnayciListesiDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="EBYSEvrakTebellugTarihiDVO">
+    <sequence>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="tebellugTarihi" nillable="true" type="xsd:string"/>
+     <element name="gonderimSekli" nillable="true" type="xsd:string"/>
+     <element name="mesajKodu" type="xsd:int"/>
+     <element name="mesajAciklamasi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="HuyapEvrakDVO">
+    <sequence>
+     <element name="geldigiYer" nillable="true" type="xsd:string"/>
+     <element name="geldigiYerNo" nillable="true" type="xsd:string"/>
+     <element name="konu" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="evrakCesidi" nillable="true" type="xsd:string"/>
+     <element name="birimKodu" nillable="true" type="xsd:string"/>
+     <element name="birimEvrakTarihi" nillable="true" type="xsd:string"/>
+     <element name="ggEvrakId" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="geldigiYerTarih" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="ilgiList" nillable="true" type="tns2:HuyapIlgiListDVO"/>
+     <element name="dosyaList" nillable="true" type="tns2:HuyapDosyaListDVO"/>
+     <element name="dagitimList" nillable="true" type="tns2:HuyapDagitimListDVO"/>
+     <element name="ad" nillable="true" type="xsd:string"/>
+     <element name="soyad" nillable="true" type="xsd:string"/>
+     <element name="tcKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="emekliSicilNo" nillable="true" type="xsd:string"/>
+     <element name="tahsisNo" nillable="true" type="xsd:string"/>
+     <element name="isyeriNo" nillable="true" type="xsd:string"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="ekList" nillable="true" type="tns2:HuyapEkListDVO"/>
+     <element name="evrakiKaydedenKisiTCKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="evrakiKaydedenKisiSicilNo" nillable="true" type="xsd:string"/>
+     <element name="evrakiKaydedenKisiLdapUserName" nillable="true" type="xsd:string"/>
+     <element name="evrakiKaydedenKisiAd" nillable="true" type="xsd:string"/>
+     <element name="evrakiKaydedenKisiSoyad" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="HuyapIlgiListDVO">
+    <sequence>
+     <element name="ilgiList" nillable="true" type="tns2:ArrayOfArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="HuyapDosyaListDVO">
+    <sequence>
+     <element name="dosyaList" nillable="true" type="tns2:ArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="HuyapDagitimListDVO">
+    <sequence>
+     <element name="dagitimList" nillable="true" type="tns2:ArrayOfArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="HuyapEkListDVO">
+    <sequence>
+     <element name="ekList" nillable="true" type="tns2:ArrayOfArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="KullaniciBirimDVO">
+    <sequence>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="kullaniciSicil" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GetEvrakIcerikDVO">
+    <sequence>
+     <element name="sonucKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucAciklama" nillable="true" type="xsd:string"/>
+     <element name="evrakContent" nillable="true" type="tns2:EvrakContentDVO"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="wsUygulamaAdi" nillable="true" type="xsd:string"/>
+     <element name="wsKullaniciAdi" nillable="true" type="xsd:string"/>
+     <element name="evrakiGoruntuleyenKullaniciBilgisi" nillable="true" type="xsd:string"/>
+     <element name="wsSifre" nillable="true" type="xsd:string"/>
+     <element name="pdfMi" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="EvrakContentDVO">
+    <sequence>
+     <element name="content" type="xsd:base64Binary"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="dssId" nillable="true" type="xsd:string"/>
+     <element name="mimeType" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GetEvrakIdEkIdListesiDVO">
+    <sequence>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideYil" nillable="true" type="xsd:string"/>
+     <element name="sonucKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucAciklama" nillable="true" type="xsd:string"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="ekListesi" nillable="true" type="tns2:EkListesiDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="EkListesiDVO">
+    <sequence>
+     <element name="ekListesi" nillable="true" type="tns2:ArrayOfArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="SpasEvrakDVO">
+    <sequence>
+     <element name="tcNo" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="spasEvrakTipi" nillable="true" type="xsd:string"/>
+     <element name="islemKodu" nillable="true" type="xsd:string"/>
+     <element name="islemAdi" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="yil" nillable="true" type="xsd:string"/>
+     <element name="evrTip" nillable="true" type="xsd:string"/>
+     <element name="pasaportNo" nillable="true" type="xsd:string"/>
+     <element name="kazaTarihi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="BirimHuyapDVO">
+    <sequence>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="birimKodu" nillable="true" type="xsd:string"/>
+     <element name="ilKodu" nillable="true" type="xsd:string"/>
+     <element name="merkezTasra" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="EvrakAraDVO">
+    <sequence>
+     <element name="varide_no" nillable="true" type="xsd:string"/>
+     <element name="varide_tarihi" nillable="true" type="xsd:string"/>
+     <element name="acklm" nillable="true" type="xsd:string"/>
+     <element name="talepTarihi" nillable="true" type="xsd:string"/>
+     <element name="talepTipi" nillable="true" type="xsd:string"/>
+     <element name="tcNo" nillable="true" type="xsd:string"/>
+     <element name="sicilNo" nillable="true" type="xsd:string"/>
+     <element name="evrakinGelisSekli" nillable="true" type="xsd:string"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="ad" nillable="true" type="xsd:string"/>
+     <element name="soyad" nillable="true" type="xsd:string"/>
+     <element name="birimId" nillable="true" type="xsd:string"/>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="sonucKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucMesaj" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="UDFToPDFConvertDVO">
+    <sequence>
+     <element name="sonucMesajKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucMesajAciklama" nillable="true" type="xsd:string"/>
+     <element name="contentDVO" nillable="true" type="tns2:EvrakContentDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="EvrakDetaySorguDVO">
+    <sequence>
+     <element name="tcKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideYil" nillable="true" type="xsd:string"/>
+     <element name="ggEvrakID" nillable="true" type="xsd:string"/>
+     <element name="evrakID" nillable="true" type="xsd:string"/>
+     <element name="birimID" nillable="true" type="xsd:string"/>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="birimEvrakTarihi" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="havaleTarihi" nillable="true" type="xsd:string"/>
+     <element name="evrakStatu" nillable="true" type="xsd:string"/>
+     <element name="evrakTipi" nillable="true" type="xsd:string"/>
+     <element name="kaydeden" nillable="true" type="xsd:string"/>
+     <element name="wf2Name" nillable="true" type="xsd:string"/>
+     <element name="wf2Description" nillable="true" type="xsd:string"/>
+     <element name="wf2StepUserid" nillable="true" type="xsd:string"/>
+     <element name="wf2StepRoleid" nillable="true" type="xsd:string"/>
+     <element name="rolAdi" nillable="true" type="xsd:string"/>
+     <element name="personelAdSoyadIsListesi" nillable="true" type="xsd:string"/>
+     <element name="personelAdSoyadKaydeden" nillable="true" type="xsd:string"/>
+     <element name="bagliOlduguVezne" nillable="true" type="xsd:string"/>
+     <element name="geldigiGondYer" nillable="true" type="xsd:string"/>
+     <element name="gyerTarihiBitis" nillable="true" type="xsd:string"/>
+     <element name="gyerTarihiBaslangic" nillable="true" type="xsd:string"/>
+     <element name="konusu" nillable="true" type="xsd:string"/>
+     <element name="wsKullaniciAdi" nillable="true" type="xsd:string"/>
+     <element name="wsSifre" nillable="true" type="xsd:string"/>
+     <element name="sonucMesajKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucMesajAciklama" nillable="true" type="xsd:string"/>
+     <element name="uygulamaAdi" nillable="true" type="xsd:string"/>
+     <element name="kullanicininTcKimlikNumarasi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="EBYSEvrakTakipSorguDVO">
+    <sequence>
+     <element name="tcKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="yil" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="konusu" nillable="true" type="xsd:string"/>
+     <element name="ilgiliBirim" nillable="true" type="xsd:string"/>
+     <element name="evrakTipi" nillable="true" type="xsd:string"/>
+     <element name="islemTarihi" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="uygulamaAdi" nillable="true" type="xsd:string"/>
+     <element name="wsKullaniciAdi" nillable="true" type="xsd:string"/>
+     <element name="wsSifre" nillable="true" type="xsd:string"/>
+     <element name="sonucMesajKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucMesajAciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ATSDVO">
+    <sequence>
+     <element name="konu" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="ad" nillable="true" type="xsd:string"/>
+     <element name="soyad" nillable="true" type="xsd:string"/>
+     <element name="tcKimlikNo" nillable="true" type="xsd:string"/>
+     <element name="emekliSicilNo" nillable="true" type="xsd:string"/>
+     <element name="tahsisNo" nillable="true" type="xsd:string"/>
+     <element name="isyeriNo" nillable="true" type="xsd:string"/>
+     <element name="ekList" nillable="true" type="tns2:ATSEkListDVO"/>
+     <element name="firstRow" nillable="true" type="xsd:string"/>
+     <element name="lastRow" nillable="true" type="xsd:string"/>
+     <element name="evrakSayisi" nillable="true" type="xsd:string"/>
+     <element name="evrakTipListesi" nillable="true" type="tns2:ArrayOf_1059928948_1440052060_nillable_string"/>
+     <element name="evrakTipKod" nillable="true" type="xsd:string"/>
+     <element name="evrakTipAciklama" nillable="true" type="xsd:string"/>
+     <element name="dosyaTcKimlikNo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ATSEkListDVO">
+    <sequence>
+     <element name="ekList" nillable="true" type="tns2:ArrayOfArrayOf_1059928948_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="EczEvrakDVO">
+    <sequence>
+     <element name="eczKodu" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="dokumNo" nillable="true" type="xsd:string"/>
+     <element name="islemKodu" nillable="true" type="xsd:string"/>
+     <element name="islemAciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="BirimEmektarDVO">
+    <sequence>
+     <element name="birimAdi" nillable="true" type="xsd:string"/>
+     <element name="birimKodu" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="EvrakSablonAraDVO">
+    <sequence>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="sablonTurKodu" nillable="true" type="xsd:string"/>
+     <element name="wsKullaniciAdi" nillable="true" type="xsd:string"/>
+     <element name="wsSifre" nillable="true" type="xsd:string"/>
+     <element name="sonucKodu" nillable="true" type="xsd:string"/>
+     <element name="sonucAciklama" nillable="true" type="xsd:string"/>
+     <element name="wsUygulamaAdi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="SahisEvrakDVO">
+    <sequence>
+     <element name="tcNo" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+     <element name="islemKodu" nillable="true" type="xsd:string"/>
+     <element name="islemAdi" nillable="true" type="xsd:string"/>
+     <element name="aciklama" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="SGKETebligatDVO">
+    <sequence>
+     <element name="dagitimId" nillable="true" type="xsd:string"/>
+     <element name="tebellugEden" nillable="true" type="xsd:string"/>
+     <element name="evrakId" nillable="true" type="xsd:string"/>
+     <element name="tebellugTarihi" nillable="true" type="xsd:string"/>
+     <element name="mesajKodu" type="xsd:int"/>
+     <element name="mesajAciklamasi" nillable="true" type="xsd:string"/>
+     <element name="entUygKod" nillable="true" type="xsd:string"/>
+     <element name="tebellugEdildiMi" nillable="true" type="xsd:string"/>
+     <element name="tebellugDrmAck" nillable="true" type="xsd:string"/>
+     <element name="entUygRefId" nillable="true" type="xsd:string"/>
+     <element name="varideNo" nillable="true" type="xsd:string"/>
+     <element name="varideTarihi" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.dys.sgk.gov.tr" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns2="http://dvo.ws.dys.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dvo.ws.dys.sgk.gov.tr"/>
+   <element name="dysBirimIsAkisiBaslatResponse">
+    <complexType>
+     <sequence>
+      <element name="dysBirimIsAkisiBaslatReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarih">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:Emektar4CDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihReturn" nillable="true" type="tns2:Emektar4CSonucDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAltBirimListesi">
+    <complexType>
+     <sequence>
+      <element name="birimId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAltBirimListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getAltBirimListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSSGKBirimListesi">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:Emektar4CDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSSGKBirimListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEBYSSGKBirimListesiReturn" nillable="true" type="tns2:Emektar4CSonucDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimCevaplanmisEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:BirimKarneDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimCevaplanmisEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getBirimCevaplanmisEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimKarneDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUstBirimListesi">
+    <complexType>
+     <sequence>
+      <element name="birimId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUstBirimListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getUstBirimListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmektar4A4BOnayciListesi">
+    <complexType>
+     <sequence>
+      <element name="emektar4A4BDVO" nillable="true" type="tns2:Emektar4A4BDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmektar4A4BOnayciListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmektar4A4BOnayciListesiReturn" nillable="true" type="tns2:Emektar4A4BDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmektar4A4BPersonelinGorevliOlduguBirimListesi">
+    <complexType>
+     <sequence>
+      <element name="emektar4A4BDVO" nillable="true" type="tns2:Emektar4A4BDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiReturn" nillable="true" type="tns2:Emektar4A4BDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSEvrakTipListesi">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:Emektar4CDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSEvrakTipListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEBYSEvrakTipListesiReturn" nillable="true" type="tns2:Emektar4CSonucDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSEvrakTebellugTarihiByEvrakId">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:EBYSEvrakTebellugTarihiDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSEvrakTebellugTarihiByEvrakIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getEBYSEvrakTebellugTarihiByEvrakIdReturn" nillable="true" type="tns2:EBYSEvrakTebellugTarihiDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapBirimBirGunEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="huyapEvrakDVO" nillable="true" type="tns2:HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapBirimBirGunEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getHuyapBirimBirGunEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSGKBaskanlikBirim">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="getSGKBaskanlikBirimResponse">
+    <complexType>
+     <sequence>
+      <element name="getSGKBaskanlikBirimReturn" nillable="true" type="tns2:BirimDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getKullaniciListesi">
+    <complexType>
+     <sequence>
+      <element name="kullaniciBirimDVO" nillable="true" type="tns2:KullaniciBirimDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getKullaniciListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getKullaniciListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_KullaniciBirimDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakEkIcerikById">
+    <complexType>
+     <sequence>
+      <element name="evrakContentDVO" nillable="true" type="tns2:GetEvrakIcerikDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakEkIcerikByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getEvrakEkIcerikByIdReturn" nillable="true" type="tns2:GetEvrakIcerikDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakIdEkListesiIdByVarideNoVarideYil">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:GetEvrakIdEkIdListesiDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakIdEkListesiIdByVarideNoVarideYilResponse">
+    <complexType>
+     <sequence>
+      <element name="getEvrakIdEkListesiIdByVarideNoVarideYilReturn" nillable="true" type="tns2:GetEvrakIdEkIdListesiDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSpasEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="spasEvrakDVO" nillable="true" type="tns2:SpasEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSpasEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getSpasEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_SpasEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimPersonelListesi">
+    <complexType>
+     <sequence>
+      <element name="birimId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimPersonelListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getBirimPersonelListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_PersonelDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTasraAltBirimler">
+    <complexType>
+     <sequence>
+      <element name="birimHuyapDVO" nillable="true" type="tns2:BirimHuyapDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTasraAltBirimlerResponse">
+    <complexType>
+     <sequence>
+      <element name="getTasraAltBirimlerReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimHuyapDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="evrakAraDVO" nillable="true" type="tns2:EvrakAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_EvrakAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakEkListesi">
+    <complexType>
+     <sequence>
+      <element name="evrakId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakEkListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEvrakEkListesiReturn" nillable="true" type="tns2:HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertUDFToPDF">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:UDFToPDFConvertDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="convertUDFToPDFResponse">
+    <complexType>
+     <sequence>
+      <element name="convertUDFToPDFReturn" nillable="true" type="tns2:UDFToPDFConvertDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimDosyaListesi">
+    <complexType>
+     <sequence>
+      <element name="birim_id" nillable="true" type="xsd:string"/>
+      <element name="dosyaFilter" nillable="true" type="xsd:string"/>
+      <element name="personel_id" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimDosyaListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getBirimDosyaListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_DosyaDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSGKMerkezTasraBirimleri">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="getSGKMerkezTasraBirimleriResponse">
+    <complexType>
+     <sequence>
+      <element name="getSGKMerkezTasraBirimleriReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimHuyapDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapBirimListesi">
+    <complexType>
+     <sequence>
+      <element name="birimHuyapDVO" nillable="true" type="tns2:BirimHuyapDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapBirimListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getHuyapBirimListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimHuyapDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakDetaySorgusu">
+    <complexType>
+     <sequence>
+      <element name="evrakDetaySorguDVO" nillable="true" type="tns2:EvrakDetaySorguDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakDetaySorgusuResponse">
+    <complexType>
+     <sequence>
+      <element name="getEvrakDetaySorgusuReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_EvrakDetaySorguDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="huyapEvrakDVO" nillable="true" type="tns2:HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getHuyapEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSEvrakTakipSorgusu">
+    <complexType>
+     <sequence>
+      <element name="evrakDetaySorguDVO" nillable="true" type="tns2:EBYSEvrakTakipSorguDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEBYSEvrakTakipSorgusuResponse">
+    <complexType>
+     <sequence>
+      <element name="getEBYSEvrakTakipSorgusuReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_EBYSEvrakTakipSorguDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getATSEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="atsDVO" nillable="true" type="tns2:ATSDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getATSEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getATSEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_ATSDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getOnayListesi">
+    <complexType>
+     <sequence>
+      <element name="sorguDVO" nillable="true" type="tns2:EvrakAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getOnayListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getOnayListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_EvrakAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakListesiByTCYilEvrTip">
+    <complexType>
+     <sequence>
+      <element name="spasEvrakDVO" nillable="true" type="tns2:SpasEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEvrakListesiByTCYilEvrTipResponse">
+    <complexType>
+     <sequence>
+      <element name="getEvrakListesiByTCYilEvrTipReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_SpasEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEczEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="eczEvrakDVO" nillable="true" type="tns2:EczEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEczEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getEczEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_EczEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getATSEvrakSayisi">
+    <complexType>
+     <sequence>
+      <element name="atsDVO" nillable="true" type="tns2:ATSDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getATSEvrakSayisiResponse">
+    <complexType>
+     <sequence>
+      <element name="getATSEvrakSayisiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_ATSDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimListesi">
+    <complexType>
+     <sequence>
+      <element name="birimEmektarDVO" nillable="true" type="tns2:BirimEmektarDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBirimListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getBirimListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_BirimEmektarDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSablonTuruFromVarideNoVarideTarihi">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:EvrakSablonAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSablonTuruFromVarideNoVarideTarihiResponse">
+    <complexType>
+     <sequence>
+      <element name="getSablonTuruFromVarideNoVarideTarihiReturn" nillable="true" type="tns2:EvrakSablonAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSahisEvrakListesi">
+    <complexType>
+     <sequence>
+      <element name="sahisEvrakDVO" nillable="true" type="tns2:SahisEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSahisEvrakListesiResponse">
+    <complexType>
+     <sequence>
+      <element name="getSahisEvrakListesiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_SahisEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDYSGorevlendirmesiVarMi">
+    <complexType>
+     <sequence>
+      <element name="sorguDVO" nillable="true" type="tns2:EvrakAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDYSGorevlendirmesiVarMiResponse">
+    <complexType>
+     <sequence>
+      <element name="getDYSGorevlendirmesiVarMiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_EvrakAraDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapEvrakBilgisi">
+    <complexType>
+     <sequence>
+      <element name="huyapEvrakDVO" nillable="true" type="tns2:HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHuyapEvrakBilgisiResponse">
+    <complexType>
+     <sequence>
+      <element name="getHuyapEvrakBilgisiReturn" nillable="true" type="impl:ArrayOf_153925627_1059928948_nillable_HuyapEvrakDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateTebellugTarih">
+    <complexType>
+     <sequence>
+      <element name="dvo" nillable="true" type="tns2:SGKETebligatDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateTebellugTarihResponse">
+    <complexType>
+     <sequence>
+      <element name="updateTebellugTarihReturn" nillable="true" type="tns2:SGKETebligatDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dysBirimIsAkisiBaslat">
+    <complexType>
+     <sequence>
+      <element name="dysIsAkisiDVO" nillable="true" type="tns2:DYSIsAkisiDVO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_153925627_1440052060_nillable_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_BirimDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BirimDVO" nillable="true" type="tns2:BirimDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_BirimKarneDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BirimKarneDVO" nillable="true" type="tns2:BirimKarneDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_HuyapEvrakDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="HuyapEvrakDVO" nillable="true" type="tns2:HuyapEvrakDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_KullaniciBirimDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="KullaniciBirimDVO" nillable="true" type="tns2:KullaniciBirimDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_SpasEvrakDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="SpasEvrakDVO" nillable="true" type="tns2:SpasEvrakDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_PersonelDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PersonelDVO" nillable="true" type="tns2:PersonelDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_BirimHuyapDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BirimHuyapDVO" nillable="true" type="tns2:BirimHuyapDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_EvrakAraDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="EvrakAraDVO" nillable="true" type="tns2:EvrakAraDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_DosyaDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="DosyaDVO" nillable="true" type="tns2:DosyaDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_EvrakDetaySorguDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="EvrakDetaySorguDVO" nillable="true" type="tns2:EvrakDetaySorguDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_EBYSEvrakTakipSorguDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="EBYSEvrakTakipSorguDVO" nillable="true" type="tns2:EBYSEvrakTakipSorguDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_ATSDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ATSDVO" nillable="true" type="tns2:ATSDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_EczEvrakDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="EczEvrakDVO" nillable="true" type="tns2:EczEvrakDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_BirimEmektarDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BirimEmektarDVO" nillable="true" type="tns2:BirimEmektarDVO"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_153925627_1059928948_nillable_SahisEvrakDVO">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="SahisEvrakDVO" nillable="true" type="tns2:SahisEvrakDVO"/>
+    </sequence>
+   </complexType>
+  </schema>
+  </wsdl:types>
+  <wsdl:message name="getEvrakDetaySorgusuResponse">
+    <wsdl:part element="impl:getEvrakDetaySorgusuResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUstBirimListesiResponse">
+    <wsdl:part element="impl:getUstBirimListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSpasEvrakListesiRequest">
+    <wsdl:part element="impl:getSpasEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimCevaplanmisEvrakListesiResponse">
+    <wsdl:part element="impl:getBirimCevaplanmisEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiRequest">
+    <wsdl:part element="impl:getEmektar4A4BPersonelinGorevliOlduguBirimListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapBirimBirGunEvrakListesiResponse">
+    <wsdl:part element="impl:getHuyapBirimBirGunEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSGKBaskanlikBirimResponse">
+    <wsdl:part element="impl:getSGKBaskanlikBirimResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapEvrakBilgisiResponse">
+    <wsdl:part element="impl:getHuyapEvrakBilgisiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEczEvrakListesiResponse">
+    <wsdl:part element="impl:getEczEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimDosyaListesiRequest">
+    <wsdl:part element="impl:getBirimDosyaListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapBirimListesiResponse">
+    <wsdl:part element="impl:getHuyapBirimListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimPersonelListesiRequest">
+    <wsdl:part element="impl:getBirimPersonelListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihRequest">
+    <wsdl:part element="impl:getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarih" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakDetaySorgusuRequest">
+    <wsdl:part element="impl:getEvrakDetaySorgusu" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertUDFToPDFRequest">
+    <wsdl:part element="impl:convertUDFToPDF" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSGKMerkezTasraBirimleriRequest">
+    <wsdl:part element="impl:getSGKMerkezTasraBirimleri" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSEvrakTebellugTarihiByEvrakIdResponse">
+    <wsdl:part element="impl:getEBYSEvrakTebellugTarihiByEvrakIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertUDFToPDFResponse">
+    <wsdl:part element="impl:convertUDFToPDFResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapBirimBirGunEvrakListesiRequest">
+    <wsdl:part element="impl:getHuyapBirimBirGunEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getATSEvrakSayisiRequest">
+    <wsdl:part element="impl:getATSEvrakSayisi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSSGKBirimListesiResponse">
+    <wsdl:part element="impl:getEBYSSGKBirimListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEczEvrakListesiRequest">
+    <wsdl:part element="impl:getEczEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDYSGorevlendirmesiVarMiRequest">
+    <wsdl:part element="impl:getDYSGorevlendirmesiVarMi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTebellugTarihResponse">
+    <wsdl:part element="impl:updateTebellugTarihResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakListesiByTCYilEvrTipRequest">
+    <wsdl:part element="impl:getEvrakListesiByTCYilEvrTip" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTasraAltBirimlerRequest">
+    <wsdl:part element="impl:getTasraAltBirimler" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSGKMerkezTasraBirimleriResponse">
+    <wsdl:part element="impl:getSGKMerkezTasraBirimleriResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakIdEkListesiIdByVarideNoVarideYilRequest">
+    <wsdl:part element="impl:getEvrakIdEkListesiIdByVarideNoVarideYil" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSEvrakTipListesiRequest">
+    <wsdl:part element="impl:getEBYSEvrakTipListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakEkIcerikByIdRequest">
+    <wsdl:part element="impl:getEvrakEkIcerikById" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapEvrakListesiResponse">
+    <wsdl:part element="impl:getHuyapEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSEvrakTakipSorgusuRequest">
+    <wsdl:part element="impl:getEBYSEvrakTakipSorgusu" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimDosyaListesiResponse">
+    <wsdl:part element="impl:getBirimDosyaListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAltBirimListesiResponse">
+    <wsdl:part element="impl:getAltBirimListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKullaniciListesiRequest">
+    <wsdl:part element="impl:getKullaniciListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimListesiRequest">
+    <wsdl:part element="impl:getBirimListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimListesiResponse">
+    <wsdl:part element="impl:getBirimListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakListesiRequest">
+    <wsdl:part element="impl:getEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dysBirimIsAkisiBaslatRequest">
+    <wsdl:part element="impl:dysBirimIsAkisiBaslat" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKullaniciListesiResponse">
+    <wsdl:part element="impl:getKullaniciListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakListesiResponse">
+    <wsdl:part element="impl:getEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSSGKBirimListesiRequest">
+    <wsdl:part element="impl:getEBYSSGKBirimListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakEkListesiResponse">
+    <wsdl:part element="impl:getEvrakEkListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSEvrakTebellugTarihiByEvrakIdRequest">
+    <wsdl:part element="impl:getEBYSEvrakTebellugTarihiByEvrakId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUstBirimListesiRequest">
+    <wsdl:part element="impl:getUstBirimListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapEvrakBilgisiRequest">
+    <wsdl:part element="impl:getHuyapEvrakBilgisi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiResponse">
+    <wsdl:part element="impl:getEmektar4A4BPersonelinGorevliOlduguBirimListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDYSGorevlendirmesiVarMiResponse">
+    <wsdl:part element="impl:getDYSGorevlendirmesiVarMiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapBirimListesiRequest">
+    <wsdl:part element="impl:getHuyapBirimListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTasraAltBirimlerResponse">
+    <wsdl:part element="impl:getTasraAltBirimlerResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakListesiByTCYilEvrTipResponse">
+    <wsdl:part element="impl:getEvrakListesiByTCYilEvrTipResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOnayListesiResponse">
+    <wsdl:part element="impl:getOnayListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmektar4A4BOnayciListesiResponse">
+    <wsdl:part element="impl:getEmektar4A4BOnayciListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getATSEvrakSayisiResponse">
+    <wsdl:part element="impl:getATSEvrakSayisiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHuyapEvrakListesiRequest">
+    <wsdl:part element="impl:getHuyapEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimPersonelListesiResponse">
+    <wsdl:part element="impl:getBirimPersonelListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getATSEvrakListesiResponse">
+    <wsdl:part element="impl:getATSEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSpasEvrakListesiResponse">
+    <wsdl:part element="impl:getSpasEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSEvrakTakipSorgusuResponse">
+    <wsdl:part element="impl:getEBYSEvrakTakipSorgusuResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSablonTuruFromVarideNoVarideTarihiResponse">
+    <wsdl:part element="impl:getSablonTuruFromVarideNoVarideTarihiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSablonTuruFromVarideNoVarideTarihiRequest">
+    <wsdl:part element="impl:getSablonTuruFromVarideNoVarideTarihi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getATSEvrakListesiRequest">
+    <wsdl:part element="impl:getATSEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEBYSEvrakTipListesiResponse">
+    <wsdl:part element="impl:getEBYSEvrakTipListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAltBirimListesiRequest">
+    <wsdl:part element="impl:getAltBirimListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSahisEvrakListesiRequest">
+    <wsdl:part element="impl:getSahisEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="dysBirimIsAkisiBaslatResponse">
+    <wsdl:part element="impl:dysBirimIsAkisiBaslatResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakEkIcerikByIdResponse">
+    <wsdl:part element="impl:getEvrakEkIcerikByIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmektar4A4BOnayciListesiRequest">
+    <wsdl:part element="impl:getEmektar4A4BOnayciListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihResponse">
+    <wsdl:part element="impl:getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakIdEkListesiIdByVarideNoVarideYilResponse">
+    <wsdl:part element="impl:getEvrakIdEkListesiIdByVarideNoVarideYilResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOnayListesiRequest">
+    <wsdl:part element="impl:getOnayListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBirimCevaplanmisEvrakListesiRequest">
+    <wsdl:part element="impl:getBirimCevaplanmisEvrakListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEvrakEkListesiRequest">
+    <wsdl:part element="impl:getEvrakEkListesi" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTebellugTarihRequest">
+    <wsdl:part element="impl:updateTebellugTarih" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSGKBaskanlikBirimRequest">
+    <wsdl:part element="impl:getSGKBaskanlikBirim" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSahisEvrakListesiResponse">
+    <wsdl:part element="impl:getSahisEvrakListesiResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="DYSWS">
+    <wsdl:operation name="dysBirimIsAkisiBaslat">
+      <wsdl:input message="impl:dysBirimIsAkisiBaslatRequest" name="dysBirimIsAkisiBaslatRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:dysBirimIsAkisiBaslatResponse" name="dysBirimIsAkisiBaslatResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarih">
+      <wsdl:input message="impl:getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihRequest" name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihResponse" name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAltBirimListesi">
+      <wsdl:input message="impl:getAltBirimListesiRequest" name="getAltBirimListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getAltBirimListesiResponse" name="getAltBirimListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSSGKBirimListesi">
+      <wsdl:input message="impl:getEBYSSGKBirimListesiRequest" name="getEBYSSGKBirimListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEBYSSGKBirimListesiResponse" name="getEBYSSGKBirimListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimCevaplanmisEvrakListesi">
+      <wsdl:input message="impl:getBirimCevaplanmisEvrakListesiRequest" name="getBirimCevaplanmisEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getBirimCevaplanmisEvrakListesiResponse" name="getBirimCevaplanmisEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUstBirimListesi">
+      <wsdl:input message="impl:getUstBirimListesiRequest" name="getUstBirimListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getUstBirimListesiResponse" name="getUstBirimListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmektar4A4BOnayciListesi">
+      <wsdl:input message="impl:getEmektar4A4BOnayciListesiRequest" name="getEmektar4A4BOnayciListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEmektar4A4BOnayciListesiResponse" name="getEmektar4A4BOnayciListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmektar4A4BPersonelinGorevliOlduguBirimListesi">
+      <wsdl:input message="impl:getEmektar4A4BPersonelinGorevliOlduguBirimListesiRequest" name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEmektar4A4BPersonelinGorevliOlduguBirimListesiResponse" name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSEvrakTipListesi">
+      <wsdl:input message="impl:getEBYSEvrakTipListesiRequest" name="getEBYSEvrakTipListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEBYSEvrakTipListesiResponse" name="getEBYSEvrakTipListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSEvrakTebellugTarihiByEvrakId">
+      <wsdl:input message="impl:getEBYSEvrakTebellugTarihiByEvrakIdRequest" name="getEBYSEvrakTebellugTarihiByEvrakIdRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEBYSEvrakTebellugTarihiByEvrakIdResponse" name="getEBYSEvrakTebellugTarihiByEvrakIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapBirimBirGunEvrakListesi">
+      <wsdl:input message="impl:getHuyapBirimBirGunEvrakListesiRequest" name="getHuyapBirimBirGunEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getHuyapBirimBirGunEvrakListesiResponse" name="getHuyapBirimBirGunEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSGKBaskanlikBirim">
+      <wsdl:input message="impl:getSGKBaskanlikBirimRequest" name="getSGKBaskanlikBirimRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getSGKBaskanlikBirimResponse" name="getSGKBaskanlikBirimResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKullaniciListesi">
+      <wsdl:input message="impl:getKullaniciListesiRequest" name="getKullaniciListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getKullaniciListesiResponse" name="getKullaniciListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakEkIcerikById">
+      <wsdl:input message="impl:getEvrakEkIcerikByIdRequest" name="getEvrakEkIcerikByIdRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEvrakEkIcerikByIdResponse" name="getEvrakEkIcerikByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakIdEkListesiIdByVarideNoVarideYil">
+      <wsdl:input message="impl:getEvrakIdEkListesiIdByVarideNoVarideYilRequest" name="getEvrakIdEkListesiIdByVarideNoVarideYilRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEvrakIdEkListesiIdByVarideNoVarideYilResponse" name="getEvrakIdEkListesiIdByVarideNoVarideYilResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpasEvrakListesi">
+      <wsdl:input message="impl:getSpasEvrakListesiRequest" name="getSpasEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getSpasEvrakListesiResponse" name="getSpasEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimPersonelListesi">
+      <wsdl:input message="impl:getBirimPersonelListesiRequest" name="getBirimPersonelListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getBirimPersonelListesiResponse" name="getBirimPersonelListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTasraAltBirimler">
+      <wsdl:input message="impl:getTasraAltBirimlerRequest" name="getTasraAltBirimlerRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getTasraAltBirimlerResponse" name="getTasraAltBirimlerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakListesi">
+      <wsdl:input message="impl:getEvrakListesiRequest" name="getEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEvrakListesiResponse" name="getEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakEkListesi">
+      <wsdl:input message="impl:getEvrakEkListesiRequest" name="getEvrakEkListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEvrakEkListesiResponse" name="getEvrakEkListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertUDFToPDF">
+      <wsdl:input message="impl:convertUDFToPDFRequest" name="convertUDFToPDFRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:convertUDFToPDFResponse" name="convertUDFToPDFResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimDosyaListesi">
+      <wsdl:input message="impl:getBirimDosyaListesiRequest" name="getBirimDosyaListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getBirimDosyaListesiResponse" name="getBirimDosyaListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSGKMerkezTasraBirimleri">
+      <wsdl:input message="impl:getSGKMerkezTasraBirimleriRequest" name="getSGKMerkezTasraBirimleriRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getSGKMerkezTasraBirimleriResponse" name="getSGKMerkezTasraBirimleriResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapBirimListesi">
+      <wsdl:input message="impl:getHuyapBirimListesiRequest" name="getHuyapBirimListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getHuyapBirimListesiResponse" name="getHuyapBirimListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakDetaySorgusu">
+      <wsdl:input message="impl:getEvrakDetaySorgusuRequest" name="getEvrakDetaySorgusuRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEvrakDetaySorgusuResponse" name="getEvrakDetaySorgusuResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapEvrakListesi">
+      <wsdl:input message="impl:getHuyapEvrakListesiRequest" name="getHuyapEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getHuyapEvrakListesiResponse" name="getHuyapEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSEvrakTakipSorgusu">
+      <wsdl:input message="impl:getEBYSEvrakTakipSorgusuRequest" name="getEBYSEvrakTakipSorgusuRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEBYSEvrakTakipSorgusuResponse" name="getEBYSEvrakTakipSorgusuResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getATSEvrakListesi">
+      <wsdl:input message="impl:getATSEvrakListesiRequest" name="getATSEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getATSEvrakListesiResponse" name="getATSEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOnayListesi">
+      <wsdl:input message="impl:getOnayListesiRequest" name="getOnayListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getOnayListesiResponse" name="getOnayListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakListesiByTCYilEvrTip">
+      <wsdl:input message="impl:getEvrakListesiByTCYilEvrTipRequest" name="getEvrakListesiByTCYilEvrTipRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEvrakListesiByTCYilEvrTipResponse" name="getEvrakListesiByTCYilEvrTipResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEczEvrakListesi">
+      <wsdl:input message="impl:getEczEvrakListesiRequest" name="getEczEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEczEvrakListesiResponse" name="getEczEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getATSEvrakSayisi">
+      <wsdl:input message="impl:getATSEvrakSayisiRequest" name="getATSEvrakSayisiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getATSEvrakSayisiResponse" name="getATSEvrakSayisiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimListesi">
+      <wsdl:input message="impl:getBirimListesiRequest" name="getBirimListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getBirimListesiResponse" name="getBirimListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSablonTuruFromVarideNoVarideTarihi">
+      <wsdl:input message="impl:getSablonTuruFromVarideNoVarideTarihiRequest" name="getSablonTuruFromVarideNoVarideTarihiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getSablonTuruFromVarideNoVarideTarihiResponse" name="getSablonTuruFromVarideNoVarideTarihiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSahisEvrakListesi">
+      <wsdl:input message="impl:getSahisEvrakListesiRequest" name="getSahisEvrakListesiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getSahisEvrakListesiResponse" name="getSahisEvrakListesiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDYSGorevlendirmesiVarMi">
+      <wsdl:input message="impl:getDYSGorevlendirmesiVarMiRequest" name="getDYSGorevlendirmesiVarMiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getDYSGorevlendirmesiVarMiResponse" name="getDYSGorevlendirmesiVarMiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapEvrakBilgisi">
+      <wsdl:input message="impl:getHuyapEvrakBilgisiRequest" name="getHuyapEvrakBilgisiRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getHuyapEvrakBilgisiResponse" name="getHuyapEvrakBilgisiResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTebellugTarih">
+      <wsdl:input message="impl:updateTebellugTarihRequest" name="updateTebellugTarihRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:updateTebellugTarihResponse" name="updateTebellugTarihResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DYSWSSoapBinding" type="impl:DYSWS">
+<wsaw:UsingAddressing wsdl:required="false"/>
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="dysBirimIsAkisiBaslat">
+      <wsdlsoap:operation soapAction="dysBirimIsAkisiBaslat"/>
+      <wsdl:input name="dysBirimIsAkisiBaslatRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dysBirimIsAkisiBaslatResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarih">
+      <wsdlsoap:operation soapAction="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarih"/>
+      <wsdl:input name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmektar4CEvrakListesiByBirimIdEvrakTipVarideTarihResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAltBirimListesi">
+      <wsdlsoap:operation soapAction="getAltBirimListesi"/>
+      <wsdl:input name="getAltBirimListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAltBirimListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSSGKBirimListesi">
+      <wsdlsoap:operation soapAction="getEBYSSGKBirimListesi"/>
+      <wsdl:input name="getEBYSSGKBirimListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEBYSSGKBirimListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimCevaplanmisEvrakListesi">
+      <wsdlsoap:operation soapAction="getBirimCevaplanmisEvrakListesi"/>
+      <wsdl:input name="getBirimCevaplanmisEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBirimCevaplanmisEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUstBirimListesi">
+      <wsdlsoap:operation soapAction="getUstBirimListesi"/>
+      <wsdl:input name="getUstBirimListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUstBirimListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmektar4A4BOnayciListesi">
+      <wsdlsoap:operation soapAction="getEmektar4A4BOnayciListesi"/>
+      <wsdl:input name="getEmektar4A4BOnayciListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmektar4A4BOnayciListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmektar4A4BPersonelinGorevliOlduguBirimListesi">
+      <wsdlsoap:operation soapAction="getEmektar4A4BPersonelinGorevliOlduguBirimListesi"/>
+      <wsdl:input name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmektar4A4BPersonelinGorevliOlduguBirimListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSEvrakTipListesi">
+      <wsdlsoap:operation soapAction="getEBYSEvrakTipListesi"/>
+      <wsdl:input name="getEBYSEvrakTipListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEBYSEvrakTipListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSEvrakTebellugTarihiByEvrakId">
+      <wsdlsoap:operation soapAction="getEBYSEvrakTebellugTarihiByEvrakId"/>
+      <wsdl:input name="getEBYSEvrakTebellugTarihiByEvrakIdRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEBYSEvrakTebellugTarihiByEvrakIdResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapBirimBirGunEvrakListesi">
+      <wsdlsoap:operation soapAction="getHuyapBirimBirGunEvrakListesi"/>
+      <wsdl:input name="getHuyapBirimBirGunEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHuyapBirimBirGunEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSGKBaskanlikBirim">
+      <wsdlsoap:operation soapAction="getSGKBaskanlikBirim"/>
+      <wsdl:input name="getSGKBaskanlikBirimRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSGKBaskanlikBirimResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKullaniciListesi">
+      <wsdlsoap:operation soapAction="getKullaniciListesi"/>
+      <wsdl:input name="getKullaniciListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getKullaniciListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakEkIcerikById">
+      <wsdlsoap:operation soapAction="getEvrakEkIcerikById"/>
+      <wsdl:input name="getEvrakEkIcerikByIdRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEvrakEkIcerikByIdResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakIdEkListesiIdByVarideNoVarideYil">
+      <wsdlsoap:operation soapAction="getEvrakIdEkListesiIdByVarideNoVarideYil"/>
+      <wsdl:input name="getEvrakIdEkListesiIdByVarideNoVarideYilRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEvrakIdEkListesiIdByVarideNoVarideYilResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpasEvrakListesi">
+      <wsdlsoap:operation soapAction="getSpasEvrakListesi"/>
+      <wsdl:input name="getSpasEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSpasEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimPersonelListesi">
+      <wsdlsoap:operation soapAction="getBirimPersonelListesi"/>
+      <wsdl:input name="getBirimPersonelListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBirimPersonelListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTasraAltBirimler">
+      <wsdlsoap:operation soapAction="getTasraAltBirimler"/>
+      <wsdl:input name="getTasraAltBirimlerRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTasraAltBirimlerResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakListesi">
+      <wsdlsoap:operation soapAction="getEvrakListesi"/>
+      <wsdl:input name="getEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakEkListesi">
+      <wsdlsoap:operation soapAction="getEvrakEkListesi"/>
+      <wsdl:input name="getEvrakEkListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEvrakEkListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertUDFToPDF">
+      <wsdlsoap:operation soapAction="convertUDFToPDF"/>
+      <wsdl:input name="convertUDFToPDFRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="convertUDFToPDFResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimDosyaListesi">
+      <wsdlsoap:operation soapAction="getBirimDosyaListesi"/>
+      <wsdl:input name="getBirimDosyaListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBirimDosyaListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSGKMerkezTasraBirimleri">
+      <wsdlsoap:operation soapAction="getSGKMerkezTasraBirimleri"/>
+      <wsdl:input name="getSGKMerkezTasraBirimleriRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSGKMerkezTasraBirimleriResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapBirimListesi">
+      <wsdlsoap:operation soapAction="getHuyapBirimListesi"/>
+      <wsdl:input name="getHuyapBirimListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHuyapBirimListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakDetaySorgusu">
+      <wsdlsoap:operation soapAction="getEvrakDetaySorgusu"/>
+      <wsdl:input name="getEvrakDetaySorgusuRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEvrakDetaySorgusuResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapEvrakListesi">
+      <wsdlsoap:operation soapAction="getHuyapEvrakListesi"/>
+      <wsdl:input name="getHuyapEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHuyapEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEBYSEvrakTakipSorgusu">
+      <wsdlsoap:operation soapAction="getEBYSEvrakTakipSorgusu"/>
+      <wsdl:input name="getEBYSEvrakTakipSorgusuRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEBYSEvrakTakipSorgusuResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getATSEvrakListesi">
+      <wsdlsoap:operation soapAction="getATSEvrakListesi"/>
+      <wsdl:input name="getATSEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getATSEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOnayListesi">
+      <wsdlsoap:operation soapAction="getOnayListesi"/>
+      <wsdl:input name="getOnayListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOnayListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvrakListesiByTCYilEvrTip">
+      <wsdlsoap:operation soapAction="getEvrakListesiByTCYilEvrTip"/>
+      <wsdl:input name="getEvrakListesiByTCYilEvrTipRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEvrakListesiByTCYilEvrTipResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEczEvrakListesi">
+      <wsdlsoap:operation soapAction="getEczEvrakListesi"/>
+      <wsdl:input name="getEczEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEczEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getATSEvrakSayisi">
+      <wsdlsoap:operation soapAction="getATSEvrakSayisi"/>
+      <wsdl:input name="getATSEvrakSayisiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getATSEvrakSayisiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimListesi">
+      <wsdlsoap:operation soapAction="getBirimListesi"/>
+      <wsdl:input name="getBirimListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBirimListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSablonTuruFromVarideNoVarideTarihi">
+      <wsdlsoap:operation soapAction="getSablonTuruFromVarideNoVarideTarihi"/>
+      <wsdl:input name="getSablonTuruFromVarideNoVarideTarihiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSablonTuruFromVarideNoVarideTarihiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSahisEvrakListesi">
+      <wsdlsoap:operation soapAction="getSahisEvrakListesi"/>
+      <wsdl:input name="getSahisEvrakListesiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSahisEvrakListesiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDYSGorevlendirmesiVarMi">
+      <wsdlsoap:operation soapAction="getDYSGorevlendirmesiVarMi"/>
+      <wsdl:input name="getDYSGorevlendirmesiVarMiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDYSGorevlendirmesiVarMiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHuyapEvrakBilgisi">
+      <wsdlsoap:operation soapAction="getHuyapEvrakBilgisi"/>
+      <wsdl:input name="getHuyapEvrakBilgisiRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHuyapEvrakBilgisiResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTebellugTarih">
+      <wsdlsoap:operation soapAction="updateTebellugTarih"/>
+      <wsdl:input name="updateTebellugTarihRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateTebellugTarihResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DYSWSService">
+    <wsdl:port binding="impl:DYSWSSoapBinding" name="DYSWS">
+      <wsdlsoap:address location="https://dys.sgk.gov.tr/WS_DYS/services/DYSWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

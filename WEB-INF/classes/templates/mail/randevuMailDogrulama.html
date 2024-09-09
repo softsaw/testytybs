@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>YURT DIŞI TEŞKİLATI BİLGİ YÖNETİM SİSTEMİ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css"
+	href="https://ytybs.ailevecalisma.gov.tr/assets/css/thymeleaf.css" />
+
+</head>
+<body class="center">
+<div>
+	<table>
+
+	<tr>
+		<td class="ortala" rowspan="2"><a href="https://www.csgb.gov.tr/"><img alt="" src="https://ytybs.ailevecalisma.gov.tr/assets/img/csgblogo.png"></a></td>
+		<td>YURT DIŞI TEŞKİLATI BİLGİ YÖNETİM SİSTEMİ (YTBYS)</td>
+	</tr>
+	
+	<tr>
+		<td> </td>
+	</tr>
+		<tr>
+			<td> </td>
+		</tr>
+
+	</table>
+
+	<table>
+	
+	<tr>
+		<td>Sayın İlgili, <br/><br/>
+			Çalışma ve Sosyal Güvenlik Bakanlığı Yurt dışı teşkilatlarına SGK İl Müdürlüğü vasıtasıyla yapmış olduğunuz başvuru işlemi
+
+
+		</td>
+
+	</tr>
+		<br/><br/>
+	<tr>
+		<td>
+			<b><span th:text="${aciklama}"></span></b>
+		</td>
+	</tr>
+		<br/><br/>
+		<tr>
+			<td>gerekçesi ile reddedilmiştir.
+
+			</td>
+
+		</tr>
+		<tr>
+			<td><b> Başvuru sahibi T.C. Kimlik Numarası : 	<span th:text="${vatandasTcKNo}"></span></b>
+
+			</td>
+
+		</tr>
+
+		<br/><br/>
+		<tr>
+			<td>Daha detaylı bilgi almak için iletişim: </br>
+
+				MAIL: <span th:text="${sgkKullaniciEposta}"></span>
+
+
+			</td>
+
+		</tr>
+	</table>
+	</br></br></br>
+	<table>
+		<tr>
+			<td>İyi günler dileriz.</td>
+		</tr>
+		<tr>
+			<td>Bu e-posta kişiye özel bilgi içermektedir. </td>
+		</tr>
+		<tr>
+			<td>Sizden kişisel bilgilerinizi veya YTBYS parolanızı telefon, e-posta v.b. yollar ile isteyen kişilere karşı dikkatli olunuz, bilgilerinizi vermeyiniz. </td>
+		</tr>
+
+	</table>
+</div>
+</body>
+</html>

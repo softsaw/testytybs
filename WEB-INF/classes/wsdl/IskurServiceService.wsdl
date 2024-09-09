@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+
+    targetNamespace="http://webservice.iskur.sgk.gov.tr"
+    xmlns:tns2="http://dto.iskur.sgk.gov.tr"
+    xmlns:impl="http://webservice.iskur.sgk.gov.tr"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:types>
+        <schema targetNamespace="http://webservice.iskur.sgk.gov.tr" xmlns="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns2="http://dto.iskur.sgk.gov.tr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://dto.iskur.sgk.gov.tr"/>
+            <element name="get4ACalisanIseGirisByTarihAndGorevKoduResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanIseGirisByTarihAndGorevKoduReturn" nillable="true"
+                             type="impl:ArrayOf_345784768_nillable_Iskur4ACalisanIseGirisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIseGiris">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIseGirisResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanIseGirisReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_Iskur4ACalisanIseGirisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4BCalisan">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4BCalisanResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4BCalisanReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_Iskur4BCalisanDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getAraciByGirisTarihi">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getAraciByGirisTarihiResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getAraciByGirisTarihiReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurAraciDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIseGirisByTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIseGirisByTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanIseGirisByTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_Iskur4ACalisanIseGirisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getGssProvizyon">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getGssProvizyonResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getGssProvizyonReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurGssProvizyonDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4BEmekli">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="kanunNo" type="xsd:int"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4BEmekliResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4BEmekliReturn" nillable="true" type="tns2:Iskur4BEmekliDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="istihkakOdemesi">
+                <complexType>
+                    <sequence>
+                        <element name="sicilNo" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="istihkakOdemesiResponse">
+                <complexType>
+                    <sequence>
+                        <element name="istihkakOdemesiReturn" nillable="true" type="tns2:Bs_BorcSor"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIstenAyrilisByTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIstenAyrilisByTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanIstenAyrilisByTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_Iskur4ACalisanIstenAyrilisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getMedulaSGDPIsyeriHekim">
+                <complexType>
+                    <sequence>
+                        <element name="mernis" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getMedulaSGDPIsyeriHekimResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getMedulaSGDPIsyeriHekimReturn" nillable="true" type="tns2:MedulaSonucDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilByGuncellemeTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilByGuncellemeTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getTescilByGuncellemeTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurIsyeriTescilBilgileriDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIstenAyrilis">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIstenAyrilisResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanIstenAyrilisReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_Iskur4ACalisanIstenAyrilisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIseGiris">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIseGirisResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getSandikIseGirisReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurSandikIseGirisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getIsyeri4ACalisanSayilari">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="yeniSubeKod" nillable="true" type="xsd:string"/>
+                        <element name="eskiSubeKod" nillable="true" type="xsd:string"/>
+                        <element name="siraNo" nillable="true" type="xsd:string"/>
+                        <element name="araciNo" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getIsyeri4ACalisanSayilariResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getIsyeri4ACalisanSayilariReturn" nillable="true" type="tns2:IskurIsyeri4ACalisanSayilariDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilByCikisTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilByCikisTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getTescilByCikisTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurIsyeriTescilBilgileriDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4CCalisan">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4CCalisanResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4CCalisanReturn" nillable="true" type="tns2:Iskur4CCalisanDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisan">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanReturn" nillable="true" type="tns2:Iskur4ACalisanHizmetDokumDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getGssTahakkuk">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getGssTahakkukResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getGssTahakkukReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurGssTahakkukDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilByGirisTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilByGirisTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getTescilByGirisTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurIsyeriTescilBilgileriDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescil">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="yeniSubeKod" nillable="true" type="xsd:string"/>
+                        <element name="eskiSubeKod" nillable="true" type="xsd:string"/>
+                        <element name="siraNo" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getTescilResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getTescilReturn" nillable="true" type="tns2:IskurTescilDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIstenAyrilis">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIstenAyrilisResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getSandikIstenAyrilisReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurSandikIstenAyrilisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4AEmekli">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4AEmekliResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4AEmekliReturn" nillable="true" type="tns2:Iskur4AEmekliDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIseGirisByTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIseGirisByTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getSandikIseGirisByTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurSandikIseGirisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4CEmekli">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4CEmekliResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4CEmekliReturn" nillable="true" type="tns2:Iskur4CEmekliDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanGeciciIsGorememezlik">
+                <complexType>
+                    <sequence>
+                        <element name="no" nillable="true" type="xsd:string"/>
+                        <element name="isMernis" type="xsd:boolean"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanGeciciIsGorememezlikResponse">
+                <complexType>
+                    <sequence>
+                        <element name="get4ACalisanGeciciIsGorememezlikReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_Iskur4ACalisanGeciciIsGorememezlikDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIstenAyrilisByTarih">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="getSandikIstenAyrilisByTarihResponse">
+                <complexType>
+                    <sequence>
+                        <element name="getSandikIstenAyrilisByTarihReturn" nillable="true" type="impl:ArrayOf_345784768_nillable_IskurSandikIstenAyrilisDTO"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="get4ACalisanIseGirisByTarihAndGorevKodu">
+                <complexType>
+                    <sequence>
+                        <element name="ilKod" nillable="true" type="xsd:string"/>
+                        <element name="subeKod" nillable="true" type="xsd:string"/>
+                        <element name="tarih" nillable="true" type="xsd:string"/>
+                        <element name="gorevKodu" nillable="true" type="xsd:string"/>
+                        <element name="userName" nillable="true" type="xsd:string"/>
+                        <element name="password" nillable="true" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="ArrayOf_345784768_nillable_Iskur4ACalisanIseGirisDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Iskur4ACalisanIseGirisDTO" nillable="true"
+                         type="tns2:Iskur4ACalisanIseGirisDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_Iskur4BCalisanDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Iskur4BCalisanDTO" nillable="true"
+                         type="tns2:Iskur4BCalisanDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_IskurAraciDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurAraciDTO" nillable="true"
+                         type="tns2:IskurAraciDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_IskurGssProvizyonDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurGssProvizyonDTO" nillable="true"
+                         type="tns2:IskurGssProvizyonDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_Iskur4ACalisanIstenAyrilisDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Iskur4ACalisanIstenAyrilisDTO"
+                         nillable="true" type="tns2:Iskur4ACalisanIstenAyrilisDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_IskurIsyeriTescilBilgileriDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurIsyeriTescilBilgileriDTO"
+                         nillable="true" type="tns2:IskurIsyeriTescilBilgileriDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_IskurSandikIseGirisDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurSandikIseGirisDTO" nillable="true"
+                         type="tns2:IskurSandikIseGirisDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_IskurGssTahakkukDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurGssTahakkukDTO" nillable="true"
+                         type="tns2:IskurGssTahakkukDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_IskurSandikIstenAyrilisDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurSandikIstenAyrilisDTO" nillable="true"
+                         type="tns2:IskurSandikIstenAyrilisDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_345784768_nillable_Iskur4ACalisanGeciciIsGorememezlikDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Iskur4ACalisanGeciciIsGorememezlikDTO"
+                         nillable="true" type="tns2:Iskur4ACalisanGeciciIsGorememezlikDTO"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema targetNamespace="http://dto.iskur.sgk.gov.tr" xmlns="http://www.w3.org/2001/XMLSchema"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <complexType name="Iskur4ACalisanIseGirisDTO">
+                <sequence>
+                    <element name="SICILNO" nillable="true" type="xsd:string"/>
+                    <element name="VATANDAS_NO" nillable="true" type="xsd:string"/>
+                    <element name="ADI" nillable="true" type="xsd:string"/>
+                    <element name="SOYADI" nillable="true" type="xsd:string"/>
+                    <element name="BABAADI" nillable="true" type="xsd:string"/>
+                    <element name="DOGUMTAR" nillable="true" type="xsd:string"/>
+                    <element name="CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="ISEGIRISTARIHI" nillable="true" type="xsd:string"/>
+                    <element name="EVRAKTARIHI" nillable="true" type="xsd:string"/>
+                    <element name="EVRAKSAYISI" nillable="true" type="xsd:string"/>
+                    <element name="POSTATARIHI" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIMAHIYET" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIYENISUBE" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIESKISUBE" nillable="true" type="xsd:string"/>
+                    <element name="ISYERISIRA" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIIL" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIILCE" nillable="true" type="xsd:string"/>
+                    <element name="ISYERIARACI" nillable="true" type="xsd:string"/>
+                    <element name="ITTKODU" nillable="true" type="xsd:string"/>
+                    <element name="MESLEKKODU" nillable="true" type="xsd:string"/>
+                    <element name="GOREVKODU" nillable="true" type="xsd:string"/>
+                    <element name="CBISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_S" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_MESLEK" nillable="true" type="xsd:string"/>
+                    <element name="CBDOSYANO" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_IL" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4BCalisanDTO">
+                <sequence>
+                    <element name="MERNIS" nillable="true" type="xsd:long"/>
+                    <element name="SICIL" nillable="true" type="xsd:string"/>
+                    <element name="STATU_KODU" nillable="true" type="xsd:string"/>
+                    <element name="TARIH" nillable="true" type="xsd:int"/>
+                    <element name="KODU" nillable="true" type="xsd:byte"/>
+                    <element name="SIRA" nillable="true" type="xsd:byte"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurAraciDTO">
+                <sequence>
+                    <element name="AR_ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_YENI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_ESKI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="AR_ARACI_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_UNVAN" nillable="true" type="xsd:string"/>
+                    <element name="AR_BASLAMA_TARIH" nillable="true" type="xsd:string"/>
+                    <element name="AR_BITIS_TARIH" nillable="true" type="xsd:string"/>
+                    <element name="AR_SIGORTALI_SAYI" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_ADRES" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_POSTA_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_VERG_NO" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_SOYAD" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_AD" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_ADRES" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_POSTA_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_ISTEL" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_EVTEL" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_FAX" nillable="true" type="xsd:string"/>
+                    <element name="AR_NUFUS_SAYI" nillable="true" type="xsd:string"/>
+                    <element name="AR_MERNIS_NO" nillable="true" type="xsd:string"/>
+                    <element name="AR_UPTARIH" nillable="true" type="xsd:string"/>
+                    <element name="AR_TIS_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_UYRUK" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_ADR_IL" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_ADR_ILCE" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_ADR_IL" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_ADR_ILCE" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_DIS_KAPI" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_IC_KAPI" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_DIS_KAPI" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISV_IC_KAPI" nillable="true" type="xsd:string"/>
+                    <element name="AR_NUFUS_IL" nillable="true" type="xsd:string"/>
+                    <element name="AR_NUFUS_ILCE" nillable="true" type="xsd:string"/>
+                    <element name="AR_MAHIYET" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurGssProvizyonDTO">
+                <sequence>
+                    <element name="HAREKET" nillable="true" type="tns2:ArrayOfIskurGssHareketDTO"/>
+                    <element name="GST_MERNIS_NO" nillable="true" type="xsd:string"/>
+                    <element name="GST_SAGLIK_AD" nillable="true" type="xsd:string"/>
+                    <element name="GST_SAGLIK_SOYAD" nillable="true" type="xsd:string"/>
+                    <element name="GST_ILK_SOYAD" nillable="true" type="xsd:string"/>
+                    <element name="GST_CINSIYET_KOD" nillable="true" type="xsd:string"/>
+                    <element name="GST_YAKINLIK" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurGssHareketDTO">
+                <sequence>
+                    <element name="GSH_SIG_BAS_TRH" nillable="true" type="xsd:string"/>
+                    <element name="GSH_SIG_BIT_TRH" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskurGssHareketDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurGssHareketDTO" nillable="true"
+                         type="tns2:IskurGssHareketDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4BEmekliDTO">
+                <sequence>
+                    <element name="MERNIS" nillable="true" type="xsd:string"/>
+                    <element name="SICIL" nillable="true" type="xsd:string"/>
+                    <element name="TARIH" nillable="true" type="xsd:int"/>
+                    <element name="NEVI" nillable="true" type="xsd:string"/>
+                    <element name="ISIM" nillable="true" type="xsd:string"/>
+                    <element name="SOYISIM" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Bs_BorcSor">
+                <sequence>
+                    <element name="soyaKodu" nillable="true" type="xsd:string"/>
+                    <element name="bagliOlduguSube" nillable="true" type="xsd:string"/>
+                    <element name="te_statusString" nillable="true" type="xsd:string"/>
+                    <element name="hataMesaji" nillable="true" type="xsd:string"/>
+                    <element name="logaYazildi" type="xsd:boolean"/>
+                    <element name="barCode" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_ARACI_NO" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_ERROR_KOD" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_ESKISUBEKOD" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_FAIZ_IPC" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_FAIZ_ISS" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_FAIZ_PRIM" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_IPC" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_ISS" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_PRIM" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_TARIH" nillable="true" type="xsd:string"/>
+                    <element name="c_BORC_YENISUBEKOD" nillable="true" type="xsd:string"/>
+                    <element name="c_MESAJ" nillable="true" type="xsd:string"/>
+                    <element name="hata" nillable="true" type="xsd:string"/>
+                    <element name="ii_ih_makam_adres1" nillable="true" type="xsd:string"/>
+                    <element name="ii_ih_makam_adres2" nillable="true" type="xsd:string"/>
+                    <element name="ii_ih_makam_unv" nillable="true" type="xsd:string"/>
+                    <element name="te_mahiyet" nillable="true" type="xsd:string"/>
+                    <element name="te_mernis_no" type="xsd:long"/>
+                    <element name="te_vergi_no" type="xsd:long"/>
+                    <element name="te_tescil_tip" nillable="true" type="xsd:string"/>
+                    <element name="soyaAck" nillable="true" type="xsd:string"/>
+                    <element name="soyaBasTrh" nillable="true" type="xsd:string"/>
+                    <element name="soyaBitTrh" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4ACalisanIstenAyrilisDTO">
+                <sequence>
+                    <element name="MERNIS" nillable="true" type="xsd:long"/>
+                    <element name="SICIL" nillable="true" type="xsd:long"/>
+                    <element name="ADI" nillable="true" type="xsd:string"/>
+                    <element name="SOYADI" nillable="true" type="xsd:string"/>
+                    <element name="BABAADI" nillable="true" type="xsd:string"/>
+                    <element name="DOGUMTAR" nillable="true" type="xsd:string"/>
+                    <element name="CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_YIL" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_AY" nillable="true" type="xsd:string"/>
+                    <element name="MAHIYET_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ISKOLU_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ESKI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="YENI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="ILCE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ARACI_NO" nillable="true" type="xsd:string"/>
+                    <element name="CHECK_DIGIT" nillable="true" type="xsd:string"/>
+                    <element name="ISTEN_CIK_TAR" nillable="true" type="xsd:string"/>
+                    <element name="AYRILISNEDEN1" nillable="true" type="xsd:string"/>
+                    <element name="EKSIKGUNNEDEN" nillable="true" type="xsd:string"/>
+                    <element name="MESLEKKODU" nillable="true" type="xsd:string"/>
+                    <element name="BELGETURU" nillable="true" type="xsd:string"/>
+                    <element name="CBISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="GUN" nillable="true" type="xsd:string"/>
+                    <element name="KAZANC" nillable="true" type="xsd:string"/>
+                    <element name="EVRAK_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="YUZDEUSULU" nillable="true" type="xsd:string"/>
+                    <element name="EVRAK_NO" nillable="true" type="xsd:string"/>
+                    <element name="CBDOSYANO" nillable="true" type="xsd:string"/>
+                    <element name="ESAS" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_S" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_MESLEK" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_IL" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="MedulaSonucDTO">
+                <sequence>
+                    <element name="KOD" nillable="true" type="xsd:string"/>
+                    <element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurIsyeriTescilBilgileriDTO">
+                <sequence>
+                    <element name="ISYERI" nillable="true" type="tns2:IskurTescilIsyeriDTO"/>
+                    <element name="IHALELER" nillable="true" type="tns2:ArrayOfIskurTescilIhaleDTO"/>
+                    <element name="YONETICILER" nillable="true" type="tns2:ArrayOfIskurTescilIsyeriYoneticiDTO"/>
+                    <element name="ARACILAR" nillable="true" type="tns2:ArrayOfIskurTescilIsyeriAraciDTO"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_BILGILERI" nillable="true" type="tns2:ArrayOfIskurTescilIsyeriCSGBBilgileriDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilIsyeriDTO">
+                <sequence>
+                    <element name="TE_ODA_KAYIT_NO" nillable="true" type="xsd:string"/>
+                    <element name="TE_MUR_POS_TAR" nillable="true" type="xsd:string"/>
+                    <element name="TE_ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_YENI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_ESKI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="TE_CHECK_DIGIT" nillable="true" type="xsd:string"/>
+                    <element name="TE_TESCIL_TUR" nillable="true" type="xsd:string"/>
+                    <element name="TE_MAHIYET" nillable="true" type="xsd:string"/>
+                    <element name="TE_MAHIYET_KOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_KANKAPCK_SBKOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_STATUS_STRING" nillable="true" type="xsd:string"/>
+                    <element name="TE_UNVAN" nillable="true" type="xsd:string"/>
+                    <element name="TE_ISKOLU_KOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_ILCE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="TE_ADRES" nillable="true" type="xsd:string"/>
+                    <element name="TE_TEL" nillable="true" type="xsd:string"/>
+                    <element name="TE_FAX" nillable="true" type="xsd:string"/>
+                    <element name="TE_EPOSTA" nillable="true" type="xsd:string"/>
+                    <element name="TE_KANKAPAL_TAR" nillable="true" type="xsd:string"/>
+                    <element name="TE_KANKAPCK_TAR" nillable="true" type="xsd:string"/>
+                    <element name="TE_SIGORTALI_SAYI" nillable="true" type="xsd:string"/>
+                    <element name="TE_VERGI_DAIRE" nillable="true" type="xsd:string"/>
+                    <element name="TE_VERGI_NO" nillable="true" type="xsd:string"/>
+                    <element name="TE_TIC_SICILNO" nillable="true" type="xsd:string"/>
+                    <element name="MERKEZ_ADRES" nillable="true" type="tns2:IskurTescilIsyeriAdresDTO"/>
+                    <element name="nakilDurum" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilIsyeriAdresDTO">
+                <sequence>
+                    <element name="ADR_ADRES" nillable="true" type="xsd:string"/>
+                    <element name="ADR_ADR_ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="ADR_ADR_ILCEKOD" nillable="true" type="xsd:string"/>
+                    <element name="ADR_POSTA_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ADR_DIS_KAPI" nillable="true" type="xsd:string"/>
+                    <element name="ADR_IC_KAPI" nillable="true" type="xsd:string"/>
+                    <element name="ADR_TEL" nillable="true" type="xsd:string"/>
+                    <element name="ADR_FAX" nillable="true" type="xsd:string"/>
+                    <element name="ADR_EPOSTA" nillable="true" type="xsd:string"/>
+                    <element name="ADR_CEP_TEL" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilIhaleDTO">
+                <sequence>
+                    <element name="II_IH_MAKAM_UNV" nillable="true" type="xsd:string"/>
+                    <element name="II_IHALE_ADRES" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskurTescilIhaleDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurTescilIhaleDTO" nillable="true"
+                         type="tns2:IskurTescilIhaleDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilIsyeriYoneticiDTO">
+                <sequence>
+                    <element name="TY_MERNIS_NO" nillable="true" type="xsd:string"/>
+                    <element name="TY_AD" nillable="true" type="xsd:string"/>
+                    <element name="TY_SOYAD" nillable="true" type="xsd:string"/>
+                    <element name="TY_BABA_AD" nillable="true" type="xsd:string"/>
+                    <element name="TY_ANA_AD" nillable="true" type="xsd:string"/>
+                    <element name="TY_DOGUM_YER" nillable="true" type="xsd:string"/>
+                    <element name="TY_DOGUM_TARIH" nillable="true" type="xsd:string"/>
+                    <element name="TY_CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="TY_UYRUK" nillable="true" type="xsd:string"/>
+                    <element name="TY_ADRES" nillable="true" type="xsd:string"/>
+                    <element name="TY_YKOD" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskurTescilIsyeriYoneticiDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurTescilIsyeriYoneticiDTO"
+                         nillable="true" type="tns2:IskurTescilIsyeriYoneticiDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilIsyeriAraciDTO">
+                <sequence>
+                    <element name="AR_ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_YENI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_ESKI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="AR_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="AR_ARACI_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_UNVAN" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_ADRES" nillable="true" type="xsd:string"/>
+                    <element name="AR_BASLAMA_TARIH" nillable="true" type="xsd:string"/>
+                    <element name="AR_BITIS_TARIH" nillable="true" type="xsd:string"/>
+                    <element name="AR_MAHIYET" nillable="true" type="xsd:string"/>
+                    <element name="AR_ISY_VERG_NO" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskurTescilIsyeriAraciDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurTescilIsyeriAraciDTO" nillable="true"
+                         type="tns2:IskurTescilIsyeriAraciDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilIsyeriCSGBBilgileriDTO">
+                <sequence>
+                    <element name="ISY_ARACINO" nillable="true" type="xsd:string"/>
+                    <element name="ISY_DOSYA_MESLEK" nillable="true" type="xsd:string"/>
+                    <element name="ISY_DOSYA_IL" nillable="true" type="xsd:string"/>
+                    <element name="ISY_DOSYA_SIRA" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskurTescilIsyeriCSGBBilgileriDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="IskurTescilIsyeriCSGBBilgileriDTO"
+                         nillable="true" type="tns2:IskurTescilIsyeriCSGBBilgileriDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurSandikIseGirisDTO">
+                <sequence>
+                    <element name="KIMLIK_NO" nillable="true" type="xsd:string"/>
+                    <element name="ADI" nillable="true" type="xsd:string"/>
+                    <element name="SOYADI" nillable="true" type="xsd:string"/>
+                    <element name="BABAADI" nillable="true" type="xsd:string"/>
+                    <element name="DOGUM_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="ISEBASTAR" nillable="true" type="xsd:string"/>
+                    <element name="EVRAK_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="EVRAKSAYISI" nillable="true" type="xsd:string"/>
+                    <element name="POSTA_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="ISY_MHYT_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="ISY_YENISUBE" nillable="true" type="xsd:string"/>
+                    <element name="ISY_ESKISUBE" nillable="true" type="xsd:string"/>
+                    <element name="ISY_SIRA_NO" nillable="true" type="xsd:string"/>
+                    <element name="ISY_IL_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ISY_ILCE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="SANDIK_KODU" nillable="true" type="xsd:string"/>
+                    <element name="SANDIK_SICIL_NO" nillable="true" type="xsd:string"/>
+                    <element name="ISY_KONTROLNO" nillable="true" type="xsd:string"/>
+                    <element name="ISY_ALT_ISV_KOD" nillable="true" type="xsd:string"/>
+                    <element name="MESLEK_KODU" nillable="true" type="xsd:string"/>
+                    <element name="GOREV_KODU" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_ISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_S" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_MESLEK" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_DOSYANO" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_IL" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurIsyeri4ACalisanSayilariDTO">
+                <sequence>
+                    <element name="ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="YENI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ESKI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="ARACI_NO" nillable="true" type="xsd:string"/>
+                    <element name="TC_UYRUKLU_SAYISI" nillable="true" type="xsd:string"/>
+                    <element name="YABANCI_UYRUKLU_SAYISI" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_YIL" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_AY" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4CCalisanDTO">
+                <sequence>
+                    <element name="EMSIC" nillable="true" type="xsd:string"/>
+                    <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+                    <element name="HIZGIR" nillable="true" type="xsd:string"/>
+                    <element name="ISTFTAR" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4ACalisanHizmetDokumDTO">
+                <sequence>
+                    <element name="SIGORTALI" nillable="true" type="tns2:Iskur4ACalisanSigortaliDTO"/>
+                    <element name="HIZMETLER" nillable="true" type="tns2:ArrayOfIskur4ACalisanHizmetlerDTO"/>
+                    <element name="SICILLER" nillable="true" type="tns2:ArrayOfIskur4ACalisanSicillerDTO"/>
+                    <element name="SIGORTALI_SICILLER" nillable="true" type="tns2:ArrayOf_11388058_nillable_string"/>
+                    <element name="_sql" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4ACalisanSigortaliDTO">
+                <sequence>
+                    <element name="MERNIS" nillable="true" type="xsd:long"/>
+                    <element name="SICIL" nillable="true" type="xsd:string"/>
+                    <element name="ISIM" nillable="true" type="xsd:string"/>
+                    <element name="SOYISIM" nillable="true" type="xsd:string"/>
+                    <element name="ILK_SOYISIM" nillable="true" type="xsd:string"/>
+                    <element name="ILK_ISE_GIRIS_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="DOGUM_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4ACalisanHizmetlerDTO">
+                <sequence>
+                    <element name="BBG_ADI" nillable="true" type="xsd:string"/>
+                    <element name="BBG_SOYADI" nillable="true" type="xsd:string"/>
+                    <element name="BBG_GIRTAR" nillable="true" type="xsd:string"/>
+                    <element name="BBG_CIKTAR" nillable="true" type="xsd:string"/>
+                    <element name="BBG_ISCIK_NEDEN" nillable="true" type="xsd:string"/>
+                    <element name="BBG_EKSIK_GUN" nillable="true" type="xsd:int"/>
+                    <element name="BBG_EKSIK_GUN_NDN" nillable="true" type="xsd:int"/>
+                    <element name="BBG_BELTUR" nillable="true" type="xsd:string"/>
+                    <element name="BBG_BEL_MAHIYET" nillable="true" type="xsd:string"/>
+                    <element name="BBG_BORYIL" nillable="true" type="xsd:int"/>
+                    <element name="BBG_BORGUN" nillable="true" type="xsd:int"/>
+                    <element name="BBG_BORDONEM" nillable="true" type="xsd:int"/>
+                    <element name="BBG_KAZANC" nillable="true" type="xsd:double"/>
+                    <element name="BBG_ILKOD" nillable="true" type="xsd:string"/>
+                    <element name="BBG_YENI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="BBG_ESKI_SUBE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="BBG_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="BBG_ILCE" nillable="true" type="xsd:string"/>
+                    <element name="BBG_CHECK_DIGIT" nillable="true" type="xsd:string"/>
+                    <element name="BBG_UPTARIH" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskur4ACalisanHizmetlerDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Iskur4ACalisanHizmetlerDTO" nillable="true"
+                         type="tns2:Iskur4ACalisanHizmetlerDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4ACalisanSicillerDTO">
+                <sequence>
+                    <element name="SICIL" nillable="true" type="xsd:string"/>
+                    <element name="ISIM" nillable="true" type="xsd:string"/>
+                    <element name="SOYISIM" nillable="true" type="xsd:string"/>
+                    <element name="ILK_ISE_GIRIS_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="DOGUM_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfIskur4ACalisanSicillerDTO">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="Iskur4ACalisanSicillerDTO" nillable="true"
+                         type="tns2:Iskur4ACalisanSicillerDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOf_11388058_nillable_string">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurGssTahakkukDTO">
+                <sequence>
+                    <element name="GSP_MERNIS_NO" nillable="true" type="xsd:string"/>
+                    <element name="GSP_DONEM" nillable="true" type="xsd:string"/>
+                    <element name="GSP_SIRANO" nillable="true" type="xsd:string"/>
+                    <element name="GSP_GUN" nillable="true" type="xsd:string"/>
+                    <element name="GSP_PRIM_TUTAR" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurTescilDTO">
+                <sequence>
+                    <element name="STATUS_STRING" nillable="true" type="xsd:string"/>
+                    <element name="MAHIYET" nillable="true" type="xsd:string"/>
+                    <element name="KANKAPAL_TAR" nillable="true" type="xsd:string"/>
+                    <element name="KANKAPCK_TAR" nillable="true" type="xsd:string"/>
+                    <element name="UPTARIH" nillable="true" type="xsd:string"/>
+                    <element name="YONETICILER" nillable="true" type="tns2:ArrayOfIskurTescilIsyeriYoneticiDTO"/>
+                    <element name="ILKOD" nillable="true" type="xsd:byte"/>
+                    <element name="YENI_SUBE_KOD" nillable="true" type="xsd:byte"/>
+                    <element name="ESKI_SUBE_KOD" nillable="true" type="xsd:byte"/>
+                    <element name="SIRANO" nillable="true" type="xsd:long"/>
+                    <element name="CHECK_DIGIT" nillable="true" type="xsd:byte"/>
+                    <element name="MAHIYET_KOD" nillable="true" type="xsd:byte"/>
+                    <element name="ISKOLU_KOD" nillable="true" type="xsd:int"/>
+                    <element name="ILCE_KOD" nillable="true" type="xsd:byte"/>
+                    <element name="MERNIS_NO" nillable="true" type="xsd:string"/>
+                    <element name="UNVAN" nillable="true" type="xsd:string"/>
+                    <element name="ADRES" nillable="true" type="xsd:string"/>
+                    <element name="VERGI_DAIRE" nillable="true" type="xsd:string"/>
+                    <element name="VERGI_NO" nillable="true" type="xsd:string"/>
+                    <element name="ARACILAR" nillable="true" type="tns2:ArrayOfIskurTescilIsyeriAraciDTO"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                    <element name="MERKEZ_ADRES" nillable="true" type="tns2:IskurTescilIsyeriAdresDTO"/>
+                </sequence>
+            </complexType>
+            <complexType name="IskurSandikIstenAyrilisDTO">
+                <sequence>
+                    <element name="KIMLIK_NO" nillable="true" type="xsd:string"/>
+                    <element name="ADI" nillable="true" type="xsd:string"/>
+                    <element name="SOYADI" nillable="true" type="xsd:string"/>
+                    <element name="BABAADI" nillable="true" type="xsd:string"/>
+                    <element name="DOGUM_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="CINSIYET" nillable="true" type="xsd:string"/>
+                    <element name="ISTEN_CIK_TAR2" nillable="true" type="xsd:string"/>
+                    <element name="EVRAK_TARIHI" nillable="true" type="xsd:string"/>
+                    <element name="EVRAK_SAYISI" nillable="true" type="xsd:string"/>
+                    <element name="ISY_MHYT_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="ISY_YENISUBE" nillable="true" type="xsd:string"/>
+                    <element name="ISY_ESKISUBE" nillable="true" type="xsd:string"/>
+                    <element name="ISY_IL_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ISY_ILCE_KOD" nillable="true" type="xsd:string"/>
+                    <element name="ISY_KONTROLNO" nillable="true" type="xsd:string"/>
+                    <element name="SANDIK_KODU" nillable="true" type="xsd:string"/>
+                    <element name="SANDIK_SICIL_NO" nillable="true" type="xsd:string"/>
+                    <element name="ISY_ALT_ISV_KOD" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_YIL1" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_AY1" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_YIL2" nillable="true" type="xsd:string"/>
+                    <element name="DONEM_AY2" nillable="true" type="xsd:string"/>
+                    <element name="GUN1" nillable="true" type="xsd:string"/>
+                    <element name="GUN2" nillable="true" type="xsd:string"/>
+                    <element name="KAZANC1" nillable="true" type="xsd:string"/>
+                    <element name="KAZANC2" nillable="true" type="xsd:string"/>
+                    <element name="EKSIKGUNNEDEN1" nillable="true" type="xsd:string"/>
+                    <element name="EKSIKGUNNEDEN2" nillable="true" type="xsd:string"/>
+                    <element name="AYRILISNEDENI" nillable="true" type="xsd:string"/>
+                    <element name="YUZDEUSULU" nillable="true" type="xsd:string"/>
+                    <element name="MESLEK_KODU" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_ISKOLU" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_S" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_MESLEK" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_DOSYANO" nillable="true" type="xsd:string"/>
+                    <element name="CSGB_IL" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                    <element name="ISY_SIRANO" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4AEmekliDTO">
+                <sequence>
+                    <element name="TAHSIS" nillable="true" type="xsd:string"/>
+                    <element name="TARIH" nillable="true" type="xsd:dateTime"/>
+                    <element name="ISIM" nillable="true" type="xsd:string"/>
+                    <element name="SOYISIM" nillable="true" type="xsd:string"/>
+                    <element name="SICIL" nillable="true" type="xsd:long"/>
+                    <element name="MERNIS" nillable="true" type="xsd:long"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4CEmekliDTO">
+                <sequence>
+                    <element name="TCKIMLIKNO" nillable="true" type="xsd:string"/>
+                    <element name="SICILNO" nillable="true" type="xsd:string"/>
+                    <element name="ADI" nillable="true" type="xsd:string"/>
+                    <element name="SOYADI" nillable="true" type="xsd:string"/>
+                    <element name="AYBASLTARIHI" nillable="true" type="xsd:string"/>
+                    <element name="AYRTARIHI" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="Iskur4ACalisanGeciciIsGorememezlikDTO">
+                <sequence>
+                    <element name="MERNIS" nillable="true" type="xsd:long"/>
+                    <element name="SICIL" nillable="true" type="xsd:long"/>
+                    <element name="BASLAMA_TARIHI" nillable="true" type="xsd:dateTime"/>
+                    <element name="BITIS_TARIHI" nillable="true" type="xsd:dateTime"/>
+                    <element name="ERROR_CODE" nillable="true" type="xsd:string"/>
+                    <element name="ERROR_DESCRIPTION" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="get4ACalisanIseGirisByTarihAndGorevKoduRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIseGirisByTarihAndGorevKodu"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIseGirisByTarihAndGorevKoduResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIseGirisByTarihAndGorevKoduResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIseGirisRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIseGiris"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIseGirisResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIseGirisResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4BCalisanRequest">
+        <wsdl:part name="parameters" element="impl:get4BCalisan"/>
+    </wsdl:message>
+    <wsdl:message name="get4BCalisanResponse">
+        <wsdl:part name="parameters" element="impl:get4BCalisanResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getAraciByGirisTarihiRequest">
+        <wsdl:part name="parameters" element="impl:getAraciByGirisTarihi"/>
+    </wsdl:message>
+    <wsdl:message name="getAraciByGirisTarihiResponse">
+        <wsdl:part name="parameters" element="impl:getAraciByGirisTarihiResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIseGirisByTarihRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIseGirisByTarih"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIseGirisByTarihResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIseGirisByTarihResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getGssProvizyonRequest">
+        <wsdl:part name="parameters" element="impl:getGssProvizyon"/>
+    </wsdl:message>
+    <wsdl:message name="getGssProvizyonResponse">
+        <wsdl:part name="parameters" element="impl:getGssProvizyonResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4BEmekliRequest">
+        <wsdl:part name="parameters" element="impl:get4BEmekli"/>
+    </wsdl:message>
+    <wsdl:message name="get4BEmekliResponse">
+        <wsdl:part name="parameters" element="impl:get4BEmekliResponse"/>
+    </wsdl:message>
+    <wsdl:message name="istihkakOdemesiRequest">
+        <wsdl:part name="parameters" element="impl:istihkakOdemesi"/>
+    </wsdl:message>
+    <wsdl:message name="istihkakOdemesiResponse">
+        <wsdl:part name="parameters" element="impl:istihkakOdemesiResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIstenAyrilisByTarihRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIstenAyrilisByTarih"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIstenAyrilisByTarihResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIstenAyrilisByTarihResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getMedulaSGDPIsyeriHekimRequest">
+        <wsdl:part name="parameters" element="impl:getMedulaSGDPIsyeriHekim"/>
+    </wsdl:message>
+    <wsdl:message name="getMedulaSGDPIsyeriHekimResponse">
+        <wsdl:part name="parameters" element="impl:getMedulaSGDPIsyeriHekimResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilByGuncellemeTarihRequest">
+        <wsdl:part name="parameters" element="impl:getTescilByGuncellemeTarih"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilByGuncellemeTarihResponse">
+        <wsdl:part name="parameters" element="impl:getTescilByGuncellemeTarihResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIstenAyrilisRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIstenAyrilis"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanIstenAyrilisResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanIstenAyrilisResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIseGirisRequest">
+        <wsdl:part name="parameters" element="impl:getSandikIseGiris"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIseGirisResponse">
+        <wsdl:part name="parameters" element="impl:getSandikIseGirisResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getIsyeri4ACalisanSayilariRequest">
+        <wsdl:part name="parameters" element="impl:getIsyeri4ACalisanSayilari"/>
+    </wsdl:message>
+    <wsdl:message name="getIsyeri4ACalisanSayilariResponse">
+        <wsdl:part name="parameters" element="impl:getIsyeri4ACalisanSayilariResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilByCikisTarihRequest">
+        <wsdl:part name="parameters" element="impl:getTescilByCikisTarih"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilByCikisTarihResponse">
+        <wsdl:part name="parameters" element="impl:getTescilByCikisTarihResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4CCalisanRequest">
+        <wsdl:part name="parameters" element="impl:get4CCalisan"/>
+    </wsdl:message>
+    <wsdl:message name="get4CCalisanResponse">
+        <wsdl:part name="parameters" element="impl:get4CCalisanResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisan"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getGssTahakkukRequest">
+        <wsdl:part name="parameters" element="impl:getGssTahakkuk"/>
+    </wsdl:message>
+    <wsdl:message name="getGssTahakkukResponse">
+        <wsdl:part name="parameters" element="impl:getGssTahakkukResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilByGirisTarihRequest">
+        <wsdl:part name="parameters" element="impl:getTescilByGirisTarih"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilByGirisTarihResponse">
+        <wsdl:part name="parameters" element="impl:getTescilByGirisTarihResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilRequest">
+        <wsdl:part name="parameters" element="impl:getTescil"/>
+    </wsdl:message>
+    <wsdl:message name="getTescilResponse">
+        <wsdl:part name="parameters" element="impl:getTescilResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIstenAyrilisRequest">
+        <wsdl:part name="parameters" element="impl:getSandikIstenAyrilis"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIstenAyrilisResponse">
+        <wsdl:part name="parameters" element="impl:getSandikIstenAyrilisResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4AEmekliRequest">
+        <wsdl:part name="parameters" element="impl:get4AEmekli"/>
+    </wsdl:message>
+    <wsdl:message name="get4AEmekliResponse">
+        <wsdl:part name="parameters" element="impl:get4AEmekliResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIseGirisByTarihRequest">
+        <wsdl:part name="parameters" element="impl:getSandikIseGirisByTarih"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIseGirisByTarihResponse">
+        <wsdl:part name="parameters" element="impl:getSandikIseGirisByTarihResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4CEmekliRequest">
+        <wsdl:part name="parameters" element="impl:get4CEmekli"/>
+    </wsdl:message>
+    <wsdl:message name="get4CEmekliResponse">
+        <wsdl:part name="parameters" element="impl:get4CEmekliResponse"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanGeciciIsGorememezlikRequest">
+        <wsdl:part name="parameters" element="impl:get4ACalisanGeciciIsGorememezlik"/>
+    </wsdl:message>
+    <wsdl:message name="get4ACalisanGeciciIsGorememezlikResponse">
+        <wsdl:part name="parameters" element="impl:get4ACalisanGeciciIsGorememezlikResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIstenAyrilisByTarihRequest">
+        <wsdl:part name="parameters" element="impl:getSandikIstenAyrilisByTarih"/>
+    </wsdl:message>
+    <wsdl:message name="getSandikIstenAyrilisByTarihResponse">
+        <wsdl:part name="parameters" element="impl:getSandikIstenAyrilisByTarihResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IskurService">
+        <wsdl:operation name="get4ACalisanIseGirisByTarihAndGorevKodu">
+            <wsdl:input name="get4ACalisanIseGirisByTarihAndGorevKoduRequest" message="impl:get4ACalisanIseGirisByTarihAndGorevKoduRequest"/>
+            <wsdl:output name="get4ACalisanIseGirisByTarihAndGorevKoduResponse" message="impl:get4ACalisanIseGirisByTarihAndGorevKoduResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIseGiris">
+            <wsdl:input name="get4ACalisanIseGirisRequest" message="impl:get4ACalisanIseGirisRequest"/>
+            <wsdl:output name="get4ACalisanIseGirisResponse" message="impl:get4ACalisanIseGirisResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4BCalisan">
+            <wsdl:input name="get4BCalisanRequest" message="impl:get4BCalisanRequest"/>
+            <wsdl:output name="get4BCalisanResponse" message="impl:get4BCalisanResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAraciByGirisTarihi">
+            <wsdl:input name="getAraciByGirisTarihiRequest" message="impl:getAraciByGirisTarihiRequest"/>
+            <wsdl:output name="getAraciByGirisTarihiResponse" message="impl:getAraciByGirisTarihiResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIseGirisByTarih">
+            <wsdl:input name="get4ACalisanIseGirisByTarihRequest" message="impl:get4ACalisanIseGirisByTarihRequest"/>
+            <wsdl:output name="get4ACalisanIseGirisByTarihResponse" message="impl:get4ACalisanIseGirisByTarihResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getGssProvizyon">
+            <wsdl:input name="getGssProvizyonRequest" message="impl:getGssProvizyonRequest"/>
+            <wsdl:output name="getGssProvizyonResponse" message="impl:getGssProvizyonResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4BEmekli">
+            <wsdl:input name="get4BEmekliRequest" message="impl:get4BEmekliRequest"/>
+            <wsdl:output name="get4BEmekliResponse" message="impl:get4BEmekliResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="istihkakOdemesi">
+            <wsdl:input name="istihkakOdemesiRequest" message="impl:istihkakOdemesiRequest"/>
+            <wsdl:output name="istihkakOdemesiResponse" message="impl:istihkakOdemesiResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIstenAyrilisByTarih">
+            <wsdl:input name="get4ACalisanIstenAyrilisByTarihRequest" message="impl:get4ACalisanIstenAyrilisByTarihRequest"/>
+            <wsdl:output name="get4ACalisanIstenAyrilisByTarihResponse" message="impl:get4ACalisanIstenAyrilisByTarihResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMedulaSGDPIsyeriHekim">
+            <wsdl:input name="getMedulaSGDPIsyeriHekimRequest" message="impl:getMedulaSGDPIsyeriHekimRequest"/>
+            <wsdl:output name="getMedulaSGDPIsyeriHekimResponse" message="impl:getMedulaSGDPIsyeriHekimResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTescilByGuncellemeTarih">
+            <wsdl:input name="getTescilByGuncellemeTarihRequest" message="impl:getTescilByGuncellemeTarihRequest"/>
+            <wsdl:output name="getTescilByGuncellemeTarihResponse" message="impl:getTescilByGuncellemeTarihResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIstenAyrilis">
+            <wsdl:input name="get4ACalisanIstenAyrilisRequest" message="impl:get4ACalisanIstenAyrilisRequest"/>
+            <wsdl:output name="get4ACalisanIstenAyrilisResponse" message="impl:get4ACalisanIstenAyrilisResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIseGiris">
+            <wsdl:input name="getSandikIseGirisRequest" message="impl:getSandikIseGirisRequest"/>
+            <wsdl:output name="getSandikIseGirisResponse" message="impl:getSandikIseGirisResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getIsyeri4ACalisanSayilari">
+            <wsdl:input name="getIsyeri4ACalisanSayilariRequest" message="impl:getIsyeri4ACalisanSayilariRequest"/>
+            <wsdl:output name="getIsyeri4ACalisanSayilariResponse" message="impl:getIsyeri4ACalisanSayilariResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTescilByCikisTarih">
+            <wsdl:input name="getTescilByCikisTarihRequest" message="impl:getTescilByCikisTarihRequest"/>
+            <wsdl:output name="getTescilByCikisTarihResponse" message="impl:getTescilByCikisTarihResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4CCalisan">
+            <wsdl:input name="get4CCalisanRequest" message="impl:get4CCalisanRequest"/>
+            <wsdl:output name="get4CCalisanResponse" message="impl:get4CCalisanResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisan">
+            <wsdl:input name="get4ACalisanRequest" message="impl:get4ACalisanRequest"/>
+            <wsdl:output name="get4ACalisanResponse" message="impl:get4ACalisanResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getGssTahakkuk">
+            <wsdl:input name="getGssTahakkukRequest" message="impl:getGssTahakkukRequest"/>
+            <wsdl:output name="getGssTahakkukResponse" message="impl:getGssTahakkukResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTescilByGirisTarih">
+            <wsdl:input name="getTescilByGirisTarihRequest" message="impl:getTescilByGirisTarihRequest"/>
+            <wsdl:output name="getTescilByGirisTarihResponse" message="impl:getTescilByGirisTarihResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTescil">
+            <wsdl:input name="getTescilRequest" message="impl:getTescilRequest"/>
+            <wsdl:output name="getTescilResponse" message="impl:getTescilResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIstenAyrilis">
+            <wsdl:input name="getSandikIstenAyrilisRequest" message="impl:getSandikIstenAyrilisRequest"/>
+            <wsdl:output name="getSandikIstenAyrilisResponse" message="impl:getSandikIstenAyrilisResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4AEmekli">
+            <wsdl:input name="get4AEmekliRequest" message="impl:get4AEmekliRequest"/>
+            <wsdl:output name="get4AEmekliResponse" message="impl:get4AEmekliResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIseGirisByTarih">
+            <wsdl:input name="getSandikIseGirisByTarihRequest" message="impl:getSandikIseGirisByTarihRequest"/>
+            <wsdl:output name="getSandikIseGirisByTarihResponse" message="impl:getSandikIseGirisByTarihResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4CEmekli">
+            <wsdl:input name="get4CEmekliRequest" message="impl:get4CEmekliRequest"/>
+            <wsdl:output name="get4CEmekliResponse" message="impl:get4CEmekliResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanGeciciIsGorememezlik">
+            <wsdl:input name="get4ACalisanGeciciIsGorememezlikRequest" message="impl:get4ACalisanGeciciIsGorememezlikRequest"/>
+            <wsdl:output name="get4ACalisanGeciciIsGorememezlikResponse" message="impl:get4ACalisanGeciciIsGorememezlikResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIstenAyrilisByTarih">
+            <wsdl:input name="getSandikIstenAyrilisByTarihRequest" message="impl:getSandikIstenAyrilisByTarihRequest"/>
+            <wsdl:output name="getSandikIstenAyrilisByTarihResponse" message="impl:getSandikIstenAyrilisByTarihResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="IskurServiceSoapBinding" type="impl:IskurService">
+        <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="get4ACalisanIseGirisByTarihAndGorevKodu">
+            <wsdlsoap:operation soapAction="get4ACalisanIseGirisByTarihAndGorevKodu"/>
+            <wsdl:input name="get4ACalisanIseGirisByTarihAndGorevKoduRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanIseGirisByTarihAndGorevKoduResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIseGiris">
+            <wsdlsoap:operation soapAction="get4ACalisanIseGiris"/>
+            <wsdl:input name="get4ACalisanIseGirisRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanIseGirisResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4BCalisan">
+            <wsdlsoap:operation soapAction="get4BCalisan"/>
+            <wsdl:input name="get4BCalisanRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4BCalisanResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAraciByGirisTarihi">
+            <wsdlsoap:operation soapAction="getAraciByGirisTarihi"/>
+            <wsdl:input name="getAraciByGirisTarihiRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getAraciByGirisTarihiResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIseGirisByTarih">
+            <wsdlsoap:operation soapAction="get4ACalisanIseGirisByTarih"/>
+            <wsdl:input name="get4ACalisanIseGirisByTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanIseGirisByTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getGssProvizyon">
+            <wsdlsoap:operation soapAction="getGssProvizyon"/>
+            <wsdl:input name="getGssProvizyonRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getGssProvizyonResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4BEmekli">
+            <wsdlsoap:operation soapAction="get4BEmekli"/>
+            <wsdl:input name="get4BEmekliRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4BEmekliResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="istihkakOdemesi">
+            <wsdlsoap:operation soapAction="istihkakOdemesi"/>
+            <wsdl:input name="istihkakOdemesiRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="istihkakOdemesiResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIstenAyrilisByTarih">
+            <wsdlsoap:operation soapAction="get4ACalisanIstenAyrilisByTarih"/>
+            <wsdl:input name="get4ACalisanIstenAyrilisByTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanIstenAyrilisByTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMedulaSGDPIsyeriHekim">
+            <wsdlsoap:operation soapAction="getMedulaSGDPIsyeriHekim"/>
+            <wsdl:input name="getMedulaSGDPIsyeriHekimRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMedulaSGDPIsyeriHekimResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTescilByGuncellemeTarih">
+            <wsdlsoap:operation soapAction="getTescilByGuncellemeTarih"/>
+            <wsdl:input name="getTescilByGuncellemeTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getTescilByGuncellemeTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanIstenAyrilis">
+            <wsdlsoap:operation soapAction="get4ACalisanIstenAyrilis"/>
+            <wsdl:input name="get4ACalisanIstenAyrilisRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanIstenAyrilisResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIseGiris">
+            <wsdlsoap:operation soapAction="getSandikIseGiris"/>
+            <wsdl:input name="getSandikIseGirisRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getSandikIseGirisResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getIsyeri4ACalisanSayilari">
+            <wsdlsoap:operation soapAction="getIsyeri4ACalisanSayilari"/>
+            <wsdl:input name="getIsyeri4ACalisanSayilariRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getIsyeri4ACalisanSayilariResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTescilByCikisTarih">
+            <wsdlsoap:operation soapAction="getTescilByCikisTarih"/>
+            <wsdl:input name="getTescilByCikisTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getTescilByCikisTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4CCalisan">
+            <wsdlsoap:operation soapAction="get4CCalisan"/>
+            <wsdl:input name="get4CCalisanRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4CCalisanResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisan">
+            <wsdlsoap:operation soapAction="get4ACalisan"/>
+            <wsdl:input name="get4ACalisanRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getGssTahakkuk">
+            <wsdlsoap:operation soapAction="getGssTahakkuk"/>
+            <wsdl:input name="getGssTahakkukRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getGssTahakkukResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTescilByGirisTarih">
+            <wsdlsoap:operation soapAction="getTescilByGirisTarih"/>
+            <wsdl:input name="getTescilByGirisTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getTescilByGirisTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTescil">
+            <wsdlsoap:operation soapAction="getTescil"/>
+            <wsdl:input name="getTescilRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getTescilResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIstenAyrilis">
+            <wsdlsoap:operation soapAction="getSandikIstenAyrilis"/>
+            <wsdl:input name="getSandikIstenAyrilisRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getSandikIstenAyrilisResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4AEmekli">
+            <wsdlsoap:operation soapAction="get4AEmekli"/>
+            <wsdl:input name="get4AEmekliRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4AEmekliResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIseGirisByTarih">
+            <wsdlsoap:operation soapAction="getSandikIseGirisByTarih"/>
+            <wsdl:input name="getSandikIseGirisByTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getSandikIseGirisByTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4CEmekli">
+            <wsdlsoap:operation soapAction="get4CEmekli"/>
+            <wsdl:input name="get4CEmekliRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4CEmekliResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="get4ACalisanGeciciIsGorememezlik">
+            <wsdlsoap:operation soapAction="get4ACalisanGeciciIsGorememezlik"/>
+            <wsdl:input name="get4ACalisanGeciciIsGorememezlikRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="get4ACalisanGeciciIsGorememezlikResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSandikIstenAyrilisByTarih">
+            <wsdlsoap:operation soapAction="getSandikIstenAyrilisByTarih"/>
+            <wsdl:input name="getSandikIstenAyrilisByTarihRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getSandikIstenAyrilisByTarihResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IskurServiceService">
+        <wsdl:port name="IskurService" binding="impl:IskurServiceSoapBinding">
+            <wsdlsoap:address location="https://uygkamu.sgk.gov.tr/WS_ISKUR/services/IskurService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
