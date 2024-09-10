@@ -4,7 +4,7 @@
 
     <groupId>tr.gov.csgb</groupId>
     <artifactId>ytbys</artifactId>
-    <version>production-0.0.55</version>
+    <version>production-0.0.58</version>
     <packaging>war</packaging>
     <name>Ytbys</name>
 
@@ -253,6 +253,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
+
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-envers</artifactId>
