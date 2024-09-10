@@ -4,7 +4,7 @@
 
     <groupId>tr.gov.csgb</groupId>
     <artifactId>ytbys</artifactId>
-    <version>production-0.0.58</version>
+    <version>production-0.0.57</version>
     <packaging>war</packaging>
     <name>Ytbys</name>
 
